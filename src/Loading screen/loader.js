@@ -10,6 +10,8 @@ window.onload = function() {
     let logo = $("#logo-samaify");
     let featuresText = $(".features-text");
     let train = $(".train");
+    let loadingInterval;
+    let calculation;
 
 
     title.css("opacity", "1");
@@ -18,7 +20,14 @@ window.onload = function() {
     title.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
         loaderContainer.css("opacity", "1");
         innerLoader.css("width", "100%");
-        setInterval(function(){ console.log(innerLoader.width("%") / innerLoader.parent().width() * 100) }, 1);
+        loadingInterval = setInterval(() => {
+            calculation = innerLoader.width() / innerLoader.parent().width() * 100;
+            console.log(calculation)
+            if(calculation === 100){
+                console.log("entro porque es 100")
+                clearInterval(loadingInterval);
+            }
+        }, 100);
     });
 
     innerLoader.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
@@ -59,7 +68,6 @@ window.onload = function() {
             $(this).siblings().css("width", "0");
             showFeatureBoxes($(this));
             removeFeaturesHoverClass($(this), 800);
-            hiddenFeatures = false;
         }
         else{
             features.not($(this)).css("opacity", "0");
@@ -109,6 +117,7 @@ window.onload = function() {
     function removeFeaturesHoverClass(currentElement, delay){
         setTimeout(function(){
             currentElement.removeClass("features-hover-class");
+            hiddenFeatures = false;
         }, delay); //.8s is the transition time of the info dropdown
     }
 }

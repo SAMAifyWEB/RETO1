@@ -95,8 +95,8 @@ main {
     align-items: center;
     position: relative;
     z-index: 1;
-    width: 375px;
-    height: 313px;
+    width: 21vw;
+    height: 33vh;
     opacity: 0;
     transition: opacity .8s ease-in;
 }
@@ -130,8 +130,8 @@ main {
 }
 .features-hover-class {
     opacity: 1 !important;
-    width: calc(375px * 1.2);
-    height: calc(313px * 1.2);
+    width: calc(21vw * 1.2);
+    height: calc(33vh * 1.2);
     box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px rgba(34, 239, 196, 0.2), 0 0 23px rgba(34, 239, 196, 0.2), 0 0 30px rgba(34, 239, 196, 0.2), 0 0 40px rgba(34, 239, 196, 0.2), 0 0 50px rgba(34, 239, 196, 0.2);
 }
 .features-text {
