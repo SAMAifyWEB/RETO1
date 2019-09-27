@@ -1,6 +1,7 @@
 window.onload = function() {
     let title = $("#title");
     let loaderContainer = $("#loader-container");
+    let outerLoader = $("#outer-loader");
     let innerLoader = $("#inner-loader");
     let loadingText = $("#loading-text");
     let content = $("#content");
@@ -17,17 +18,10 @@ window.onload = function() {
     title.css("opacity", "1");
     title.css("margin-bottom", "0");
 
+
     title.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
+        load();
         loaderContainer.css("opacity", "1");
-        innerLoader.css("width", "100%");
-        loadingInterval = setInterval(() => {
-            calculation = innerLoader.width() / innerLoader.parent().width() * 100;
-            console.log(calculation)
-            if(calculation === 100){
-                console.log("entro porque es 100")
-                clearInterval(loadingInterval);
-            }
-        }, 100);
     });
 
     innerLoader.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
@@ -57,7 +51,7 @@ window.onload = function() {
         }
     });
     features.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
-        features.css("transition", "all .3s ease-in"); /*da nueva propiedad de transicion a las boxes para que las transiciones en hover sean de 0.3 en lugar del 0.8s inicial*/
+        features.css("transition", "all .5s ease-in-out"); /*da nueva propiedad de transicion a las boxes para que las transiciones en hover sean de 0.3 en lugar del 0.8s inicial*/
     });
 
 
@@ -71,24 +65,18 @@ window.onload = function() {
         }
         else{
             features.not($(this)).css("opacity", "0");
-            $(this).addClass("features-hover-class");
+            featuresText.css("transform", "translateY(-23vh)");
+            $(this).addClass("features-click-class");
             hideFeatureBoxes($(this));
-            createDesplegableInfo($(this));
+            if($(this).prop("id")==='features-first'){
+                createDesplegableInfo($(this), 350);
+            }
+            else{
+                createDesplegableInfo($(this), 900);
+            }
             hiddenFeatures = true;
         }
     });
-
-    features.on("mouseenter", function() {
-        $(this).addClass("features-hover-class");
-    });
-    features.on("mouseleave", function() {
-        if(!hiddenFeatures){ //if visible
-            features.css("opacity", "0.7");
-            removeFeaturesHoverClass($(this), 0);
-        }
-    });
-
-
 
 
 
@@ -98,30 +86,53 @@ window.onload = function() {
     });
     function hideFeatureBoxes(currentElement){
         setTimeout(function(){
-            currentElement.closest("#features-container").css("justify-content", "flex-start");
+            currentElement.parent().css({"left":"0"});
             features.not(currentElement).parent().css("display", "none")
         }, 300); //.3s is the transition time of features. So when the feature trhansition ends we display them to none.
     }
     function showFeatureBoxes(currentElement){
         setTimeout(function(){
-            currentElement.closest("#features-container").css("justify-content", "space-between");
-            features.not(currentElement).parent().css("display", "block")
-            features.css("opacity", "0.7"); //WHY TRANSITION NOT APPLIED TO THIS LINEEEEEEEEEE WTFFF
+            switch (currentElement.prop("id")) {
+                case 'features-first':
+                    currentElement.parent().css({"left":"0"});
+                    break;
+                case 'features-second':
+                    currentElement.parent().css({"left":"25%"});
+                    break;
+                case 'features-third':
+                    currentElement.parent().css({"left":"50%"});
+                    break;
+                case 'features-forth':
+                    currentElement.parent().css({"left":"75%"});
+                    break;
+            }
+            features.not(currentElement).parent().css("display", "flex")
+            features.css("opacity", "0.7"); //NOT WORKING BUGGED
         }, 1000); //.8s is the transition time of the info dropdown
     }
-    function createDesplegableInfo(currentElement){
+    function createDesplegableInfo(currentElement, delay){
         setTimeout(function(){
             currentElement.siblings().css("width", "60vw");
-        }, 350);
+        }, delay);
     }
     function removeFeaturesHoverClass(currentElement, delay){
         setTimeout(function(){
-            currentElement.removeClass("features-hover-class");
+            currentElement.removeClass("features-click-class");
+            featuresText.css("transform", "translateY(-20vh)");
             hiddenFeatures = false;
         }, delay); //.8s is the transition time of the info dropdown
     }
+    function load() {
+        innerLoader.width("100%")
+        let width = 0;
+        let id = setInterval(frame, 10);
+        function frame() {
+            outerLoader.find("p").html(Math.round(width) + "%");
+            if (width == 100) {
+                clearInterval(id);
+            } else { //getting the width on %
+                width = innerLoader.width() / innerLoader.parent().width() * 100;
+            }
+        }
+    }
 }
-
-
-
-/*setInterval(() => trainLine.css("display", "block"), 500);*/
