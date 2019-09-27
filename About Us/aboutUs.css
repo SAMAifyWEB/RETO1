@@ -1,0 +1,164 @@
+body {
+	margin:0;
+	padding: 0;
+	background-color: #F6F6F6;
+}
+
+#navegador {
+	background-color: orange;
+	width: 15%;
+	position: fixed;
+	height: 100%;
+}
+
+#menuHorizontal {
+	display: inline-flex;
+	height: 300px;
+	width: 85%;
+	float: right;
+	color: #0085A1;
+	text-align: center;
+	background-color: black;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+header ul li {
+	color: #FFFFFF;
+	list-style-type: none;
+	padding: 25px;
+	transition: all 1000ms ease 0s;
+	float: left;
+}
+
+li:hover {
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 15px;
+}
+
+#panelArriba {
+	height: 150px;
+	width: 85%;
+	float: right;
+	color: #0085A1;
+	text-align: center;
+}
+
+h1 {
+	font-size: 70px;
+	color: #0085A1;
+	padding-left: 20px;
+}
+
+#eslogan {
+	color: #0085A1;
+	font-size: 30px;
+	padding: 0px 0px 0px 20px;
+}
+
+h4 {
+	padding-left: 15px;
+	margin
+}
+
+h3 {
+	color: #0085A1;
+	padding: 0px 0px 0px 20px;
+	margin-top: 100px;
+}
+
+#panelAbajo {
+	color: #0085A1;
+	height: auto;
+	width: 85%;
+	float: right;
+	color: white;
+}
+
+.horizontal {
+	background-color: #0085A1;
+	border-radius: 30px;
+	height: 5px;
+	width: 5%;
+	margin:0px 0px 30px 30px;
+}
+
+#servicios {
+	display: flex;
+	width: 100%;
+	height: auto;
+	margin-top: 40px;
+}
+
+.columna {
+	width: 33%;
+	height: auto;
+	background-color: white;
+	color: #0085A1;
+	padding: 20px;
+	margin:10px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.columna img {
+	height: 50px;
+	width: auto;
+	display:block;
+	margin:auto;
+	margin-bottom: 40px;
+}
+
+#panelAbajo ul li {
+	list-style-type: none;
+	padding: 15px;
+}
+
+#quienesSomos {
+	display: flex;
+	flex-wrap: wrap;
+	width: 60%;
+	height: 1200px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 10px 0px 10px 30px;
+}
+
+.columna2 {
+	margin-right: 15px;
+	width: 47%;
+	background-color: white;
+	color: #0085A1;
+	height: 300px;
+}
+
+.columna2 p {
+	padding-left: 15px;
+}
+
+#quienesSomos img {
+	width: 100%;
+	height: auto;
+	
+}
+
+#eslogan {
+	float: left;
+}
+
+#headerEquipo {
+	max-width: 1200px;
+	margin-top: 100px;
+}
+
+.horizontal {
+	clear: both;
+}
+
+#textoEquipo {
+	color: black;
+	width: 40%;
+	float: right;
+}
