@@ -1,0 +1,27 @@
+body {
+	padding: 0;
+	margin:0;
+}
+
+h1 {
+	text-align: center;
+}
+
+#panelArriba {
+	height: 150px;
+	background-color: #88C3D3;
+	width: 85.2%;
+	float: right;
+	color: white;
+}
+
+#navegador {
+	background-color: orange;
+	height: 100%;
+	width: 15%;
+	position: fixed;
+}
+
+#panelAbajo {
+	height: 1500px;
+}
