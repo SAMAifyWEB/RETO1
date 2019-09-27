@@ -11,6 +11,8 @@ window.onload = function() {
     let logo = $("#logo-samaify");
     let featuresText = $(".features-text");
     let train = $(".train");
+    let loadingInterval;
+    let calculation;
 
 
     title.css("opacity", "1");
