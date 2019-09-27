@@ -65,17 +65,17 @@ main {
     height: 20px;
     border-radius: inherit;
     background-color: var(--main-color-faded);
-    transition: width 66.1s;
+    transition: width 4.1s;
     transition-timing-function: cubic-bezier(0, .6, .9, 0.1);
     color: white;
 }
-#outer-loader p{
+#outer-loader p {
     position: absolute;
     left: 49%;
     color: white;
     margin: 0 auto;
+    font-size: 14px;
 }
-
 #title {
     font-size: 3rem;
     font-weight: 100;
@@ -98,9 +98,30 @@ main {
     height: 100%;
     position: absolute;
     opacity: 0;
+    transition: all .8s ease-in;
+}
+#features-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
 }
 .features-inner-container {
     display: flex;
+    transition: all .6s ease-in;
+    position: absolute;
+}
+.features-inner-container:nth-child(1) {
+    left: 0;
+}
+.features-inner-container:nth-child(2) {
+    left: 25%;
+}
+.features-inner-container:nth-child(3) {
+    left: 50%;
+}
+.features-inner-container:nth-child(4) {
+    left: 75%;
 }
 .features {
     display: flex;
@@ -108,8 +129,8 @@ main {
     align-items: center;
     position: relative;
     z-index: 1;
-    width: 21vw;
-    height: 33vh;
+    width: 20vw;
+    height: 30vh;
     opacity: 0;
     transition: opacity .8s ease-in;
 }
@@ -143,24 +164,22 @@ main {
 }
 .features-click-class {
     opacity: 1 !important;
-    width: calc(21vw * 1.2);
-    height: calc(33vh * 1.2);
+    width: calc(20vw * 1.2);
+    height: calc(30vh * 1.2);
     box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px rgba(34, 239, 196, 0.2), 0 0 23px rgba(34, 239, 196, 0.2), 0 0 30px rgba(34, 239, 196, 0.2), 0 0 40px rgba(34, 239, 196, 0.2), 0 0 50px rgba(34, 239, 196, 0.2);
 }
 .features-text {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 100;
     color: white;
     opacity: 0.7;
-    transition: all .4s linear;
-    transition-timing-function: cubic-bezier(.75, 1.03, .69, 1.2);
-    transform: translateY(-21vh);
+    transition: all .5s ease-in-out;
+    transform: translateY(-20vh);
     user-select: none;
 }
-.features:hover, .features:hover .features-text{
+.features:hover, .features:hover .features-text {
     opacity: 1 !important;
 }
-
 .info {
     height: auto;
     width: 0;

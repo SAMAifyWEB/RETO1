@@ -49,7 +49,7 @@ window.onload = function() {
         }
     });
     features.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
-        features.css("transition", "all .3s ease-in-out"); /*da nueva propiedad de transicion a las boxes para que las transiciones en hover sean de 0.3 en lugar del 0.8s inicial*/
+        features.css("transition", "all .5s ease-in-out"); /*da nueva propiedad de transicion a las boxes para que las transiciones en hover sean de 0.3 en lugar del 0.8s inicial*/
     });
 
 
@@ -63,10 +63,15 @@ window.onload = function() {
         }
         else{
             features.not($(this)).css("opacity", "0");
-            featuresText.css("transform", "translateY(-25vh)");
+            featuresText.css("transform", "translateY(-23vh)");
             $(this).addClass("features-click-class");
             hideFeatureBoxes($(this));
-            createDesplegableInfo($(this));
+            if($(this).prop("id")==='features-first'){
+                createDesplegableInfo($(this), 350);
+            }
+            else{
+                createDesplegableInfo($(this), 900);
+            }
             hiddenFeatures = true;
         }
     });
@@ -79,43 +84,52 @@ window.onload = function() {
     });
     function hideFeatureBoxes(currentElement){
         setTimeout(function(){
-            currentElement.closest("#features-container").css("justify-content", "flex-start");
+            currentElement.parent().css({"left":"0"});
             features.not(currentElement).parent().css("display", "none")
         }, 300); //.3s is the transition time of features. So when the feature trhansition ends we display them to none.
     }
     function showFeatureBoxes(currentElement){
         setTimeout(function(){
-            currentElement.closest("#features-container").css("justify-content", "space-between");
-            features.not(currentElement).parent().css("display", "block")
-            features.css("transition", "all .8s ease-in");
-            features.css("opacity", "0.7"); //WHY TRANSITION NOT APPLIED TO THIS LINEEEEEEEEEE WTFFF
+            switch (currentElement.prop("id")) {
+                case 'features-first':
+                    currentElement.parent().css({"left":"0"});
+                    break;
+                case 'features-second':
+                    currentElement.parent().css({"left":"25%"});
+                    break;
+                case 'features-third':
+                    currentElement.parent().css({"left":"50%"});
+                    break;
+                case 'features-forth':
+                    currentElement.parent().css({"left":"75%"});
+                    break;
+            }
+            features.not(currentElement).parent().css("display", "flex")
+            features.css("opacity", "0.7"); //NOT WORKING BUGGED
         }, 1000); //.8s is the transition time of the info dropdown
     }
-    function createDesplegableInfo(currentElement){
+    function createDesplegableInfo(currentElement, delay){
         setTimeout(function(){
             currentElement.siblings().css("width", "60vw");
-        }, 350);
+        }, delay);
     }
     function removeFeaturesHoverClass(currentElement, delay){
         setTimeout(function(){
             currentElement.removeClass("features-click-class");
-            featuresText.css("transform", "translateY(-21vh)");
+            featuresText.css("transform", "translateY(-20vh)");
             hiddenFeatures = false;
         }, delay); //.8s is the transition time of the info dropdown
     }
     function load() {
-        innerLoader.width("100%");
+        innerLoader.width("100%")
         let width = 0;
         let id = setInterval(frame, 10);
         function frame() {
-            console.log(width)
-            outerLoader.find("p").html(width + "%");
+            outerLoader.find("p").html(Math.round(width) + "%");
             if (width == 100) {
                 clearInterval(id);
-            } else {//meter la formula
-                console.log("entro")
-                width = innerLoader.width() / innerLoader.parent().width() * 100;;
-                innerLoader.width(width + '%');
+            } else { //getting the width on %
+                width = innerLoader.width() / innerLoader.parent().width() * 100;
             }
         }
     }
