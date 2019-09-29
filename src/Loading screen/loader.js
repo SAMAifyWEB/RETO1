@@ -11,12 +11,12 @@ window.onload = function() {
     let logo = $("#logo-samaify");
     let featuresText = $(".features-text");
     let train = $(".train");
-    let loadingInterval;
-    let calculation;
+    let video = $
 
 
     title.css("opacity", "1");
     title.css("margin-bottom", "0");
+
 
 
     title.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {

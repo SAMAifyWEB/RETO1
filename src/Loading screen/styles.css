@@ -65,7 +65,7 @@ main {
     height: 20px;
     border-radius: inherit;
     background-color: var(--main-color-faded);
-    transition: width 4.1s;
+    transition: width .1s;
     transition-timing-function: cubic-bezier(0, .6, .9, 0.1);
     color: white;
 }
@@ -235,3 +235,4 @@ main {
         opacity: 0.9;
     }
 }
+video {}
