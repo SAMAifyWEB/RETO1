@@ -1,6 +1,7 @@
 window.onload = function() {
     let title = $("#title");
     let loaderContainer = $("#loader-container");
+    let outerLoader = $("#outer-loader");
     let innerLoader = $("#inner-loader");
     let loadingText = $("#loading-text");
     let content = $("#content");
@@ -10,15 +11,17 @@ window.onload = function() {
     let logo = $("#logo-samaify");
     let featuresText = $(".features-text");
     let train = $(".train");
+    let video = document.getElementsByClassName("video");
 
 
     title.css("opacity", "1");
     title.css("margin-bottom", "0");
 
+
+
     title.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
+        load();
         loaderContainer.css("opacity", "1");
-        innerLoader.css("width", "100%");
-        setInterval(function(){ console.log(innerLoader.width("%") / innerLoader.parent().width() * 100) }, 1);
     });
 
     innerLoader.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
@@ -48,39 +51,41 @@ window.onload = function() {
         }
     });
     features.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
-        features.css("transition", "all .3s ease-in"); /*da nueva propiedad de transicion a las boxes para que las transiciones en hover sean de 0.3 en lugar del 0.8s inicial*/
+        features.css("transition", "all .5s ease-in-out"); /*da nueva propiedad de transicion a las boxes para que las transiciones en hover sean de 0.5 en lugar del 0.8s inicial*/
     });
 
 
     //EVENTOS CLICK EN FEATURES
     let hiddenFeatures = false;
     features.off('click').on('click', function() {
+        let currentElementId = $(this).prop("id");
+        let videoIndex;
+        features.each(function(i){
+            if(currentElementId === $(this).prop("id")){
+                videoIndex = i;
+            }
+        });
         if(hiddenFeatures){
             $(this).siblings().css("width", "0");
             showFeatureBoxes($(this));
             removeFeaturesHoverClass($(this), 800);
-            hiddenFeatures = false;
+            stopVideo(videoIndex, 800);
         }
         else{
             features.not($(this)).css("opacity", "0");
-            $(this).addClass("features-hover-class");
+            featuresText.css("transform", "translateY(-23vh)");
+            $(this).addClass("features-click-class");
             hideFeatureBoxes($(this));
-            createDesplegableInfo($(this));
+            if($(this).prop("id")==='features-first'){
+                createDesplegableInfo($(this), 350);
+            }
+            else{
+                createDesplegableInfo($(this), 900);
+            }
+            playVideo(videoIndex);
             hiddenFeatures = true;
         }
     });
-
-    features.on("mouseenter", function() {
-        $(this).addClass("features-hover-class");
-    });
-    features.on("mouseleave", function() {
-        if(!hiddenFeatures){ //if visible
-            features.css("opacity", "0.7");
-            removeFeaturesHoverClass($(this), 0);
-        }
-    });
-
-
 
 
 
@@ -90,29 +95,65 @@ window.onload = function() {
     });
     function hideFeatureBoxes(currentElement){
         setTimeout(function(){
-            currentElement.closest("#features-container").css("justify-content", "flex-start");
+            currentElement.parent().css({"left":"0"});
             features.not(currentElement).parent().css("display", "none")
         }, 300); //.3s is the transition time of features. So when the feature trhansition ends we display them to none.
     }
     function showFeatureBoxes(currentElement){
         setTimeout(function(){
-            currentElement.closest("#features-container").css("justify-content", "space-between");
-            features.not(currentElement).parent().css("display", "block")
-            features.css("opacity", "0.7"); //WHY TRANSITION NOT APPLIED TO THIS LINEEEEEEEEEE WTFFF
+            switch (currentElement.prop("id")) {
+                case 'features-first':
+                    currentElement.parent().css({"left":"0"});
+                    break;
+                case 'features-second':
+                    currentElement.parent().css({"left":"25%"});
+                    break;
+                case 'features-third':
+                    currentElement.parent().css({"left":"50%"});
+                    break;
+                case 'features-forth':
+                    currentElement.parent().css({"left":"75%"});
+                    break;
+            }
+            features.not(currentElement).parent().css("display", "flex")
+            features.css("opacity", "0.7"); //NOT WORKING BUGGED
         }, 1000); //.8s is the transition time of the info dropdown
     }
-    function createDesplegableInfo(currentElement){
+    function createDesplegableInfo(currentElement, delay){
         setTimeout(function(){
             currentElement.siblings().css("width", "60vw");
-        }, 350);
+        }, delay);
     }
     function removeFeaturesHoverClass(currentElement, delay){
         setTimeout(function(){
-            currentElement.removeClass("features-hover-class");
+            currentElement.removeClass("features-click-class");
+            featuresText.css("transform", "translateY(-20vh)");
+            hiddenFeatures = false;
         }, delay); //.8s is the transition time of the info dropdown
     }
+    function load() {
+        innerLoader.width("100%")
+        let width = 0;
+        let id = setInterval(frame, 10);
+        function frame() {
+            outerLoader.find("p").html(Math.round(width) + "%");
+            if (width == 100) {
+                clearInterval(id);
+            } else { //getting the width on %
+                width = innerLoader.width() / innerLoader.parent().width() * 100;
+            }
+        }
+    }
+    function playVideo(videoIndex) {
+        video[videoIndex].style.height = "calc(30vh * 1.2)";
+        video[videoIndex].play();
+        video[videoIndex].style.opacity = "1";
+    }
+    function stopVideo(videoIndex, delay) {
+        setTimeout(function(){
+            video[videoIndex].style.height = "30vh";
+            video[videoIndex].pause();
+            video[videoIndex].style.opacity = "0";
+        }, delay);
+    }
 }
-
-
-
-/*setInterval(() => trainLine.css("display", "block"), 500);*/
