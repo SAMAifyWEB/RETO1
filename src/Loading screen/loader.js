@@ -11,7 +11,7 @@ window.onload = function() {
     let logo = $("#logo-samaify");
     let featuresText = $(".features-text");
     let train = $(".train");
-    let video = $
+    let video = document.getElementsByClassName("video");
 
 
     title.css("opacity", "1");
@@ -51,17 +51,25 @@ window.onload = function() {
         }
     });
     features.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
-        features.css("transition", "all .5s ease-in-out"); /*da nueva propiedad de transicion a las boxes para que las transiciones en hover sean de 0.3 en lugar del 0.8s inicial*/
+        features.css("transition", "all .5s ease-in-out"); /*da nueva propiedad de transicion a las boxes para que las transiciones en hover sean de 0.5 en lugar del 0.8s inicial*/
     });
 
 
     //EVENTOS CLICK EN FEATURES
     let hiddenFeatures = false;
     features.off('click').on('click', function() {
+        let currentElementId = $(this).prop("id");
+        let videoIndex;
+        features.each(function(i){
+            if(currentElementId === $(this).prop("id")){
+                videoIndex = i;
+            }
+        });
         if(hiddenFeatures){
             $(this).siblings().css("width", "0");
             showFeatureBoxes($(this));
             removeFeaturesHoverClass($(this), 800);
+            stopVideo(videoIndex, 800);
         }
         else{
             features.not($(this)).css("opacity", "0");
@@ -74,6 +82,7 @@ window.onload = function() {
             else{
                 createDesplegableInfo($(this), 900);
             }
+            playVideo(videoIndex);
             hiddenFeatures = true;
         }
     });
@@ -134,5 +143,17 @@ window.onload = function() {
                 width = innerLoader.width() / innerLoader.parent().width() * 100;
             }
         }
+    }
+    function playVideo(videoIndex) {
+        video[videoIndex].style.height = "calc(30vh * 1.2)";
+        video[videoIndex].play();
+        video[videoIndex].style.opacity = "1";
+    }
+    function stopVideo(videoIndex, delay) {
+        setTimeout(function(){
+            video[videoIndex].style.height = "30vh";
+            video[videoIndex].pause();
+            video[videoIndex].style.opacity = "0";
+        }, delay);
     }
 }
