@@ -156,12 +156,16 @@ h4 {
 	box-sizing: border-box;
 }
 
-.columna img {
+.columna .persona {
 	height: 50px;
 	width: auto;
 	display:block;
 	margin:auto;
 	margin-bottom: 40px;
+}
+
+.mas img {
+	height: 10px;
 }
 
 #informacion {
