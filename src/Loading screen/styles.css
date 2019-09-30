@@ -186,6 +186,14 @@ main {
     background-color: white;
     transition: .8s ease-in;
 }
+.video{
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    opacity: 0;
+    transition: .3s ease-in;
+}
 /*TRAIN LINE*/
 
 /*position absolute into static need for transitioning display none to block effect*/
@@ -235,4 +243,3 @@ main {
         opacity: 0.9;
     }
 }
-video {}
