@@ -156,7 +156,7 @@ h4 {
 	box-sizing: border-box;
 }
 
-.columna .persona {
+.columna img {
 	height: 50px;
 	width: auto;
 	display:block;
@@ -164,9 +164,6 @@ h4 {
 	margin-bottom: 40px;
 }
 
-.mas img {
-	height: 10px;
-}
 
 #informacion {
 	width: 65%;
@@ -225,18 +222,43 @@ h4 {
 	height: 300px;
 }
 
+
+.mas {
+	width: 100px;
+	position: relative;
+	bottom: 200px;
+	left: 140px;
+	visibility: hidden;
+}
+
 .columna2 p {
 	padding-left: 15px;
 }
 
-#quienesSomos img {
+#quienesSomos .persona {
 	width: 100%;
 	height: auto;
 	transition: transform ease 500ms;
 }
 
-#quienesSomos img:hover {
-	transform:  scale(1.03);
+.text{
+	position: relative;
+	bottom: 150px;
+	color: black;
+    display:block;
+    width:100%;
+    text-align:center;
+    transform(0px,0px,1);
+    transition;
+}
+
+.persona:hover{
+    transform:scale(0.25);
+    border-radius: 75%;
+}
+
+.persona:hover #quienesSomos{
+	background-color: black;
 }
 
 #headerEquipo {
