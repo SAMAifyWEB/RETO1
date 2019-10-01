@@ -17,5 +17,4 @@ let chart = new Chart(miCanvas, {
         ]
     }
 
-
 })
