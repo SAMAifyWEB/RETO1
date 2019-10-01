@@ -9,9 +9,10 @@ window.onload = function() {
     let featuresContainer = $("#features-container");
     let features = $(".features");
     let logo = $("#logo-samaify");
-    let featuresText = $(".features-text");
     let textContainerParent = $(".text-container-parent");
+    let linkContainerParent = $(".link-container-parent");
     let train = $(".train");
+    let url;
     let video = document.getElementsByClassName("video");
 
 
@@ -43,8 +44,7 @@ window.onload = function() {
         //comprobamos que el event target (content) sea el event currentTarget (Puede ser content o cualquiera de sus hijos que tengan transiciones)
         if(e.target === e.currentTarget){
             content.css("display", "none");
-            featuresContainer.css("position", "static");
-            featuresContainer.css("opacity", "1");
+            featuresContainer.css({"position" : "static", "opacity" : "1"});
             features.css("opacity", "0.7");
             logo.css("opacity", "1");
             /*trainLine.css("position", "static");
@@ -75,7 +75,6 @@ window.onload = function() {
         }
         else{
             features.not($(this)).css("opacity", "0");
-            featuresText.css("transform", "translateY(-23vh)");
             $(this).addClass("features-click-class");
             hideFeatureBoxes($(this));
             if($(this).prop("id")==='features-first'){
@@ -92,18 +91,20 @@ window.onload = function() {
 
     //EVENTOS DOBLE CLICK EN FEATURES
     features.off('dblclick').on('dblclick', function() {
-        switch ($(this).prop("id")) {
-            case "features-first": url = 'enDirecto.html';
-                break;
-            case "features-second": url = 'grafica.html';
-                break;
-            case "features-third": url = 'sandobox.html';
-                break;
-            case "features-forth": url = 'aboutUs.html';
-                break;
-        }
+        asingarUrl($(this).prop("id"));
         window.open(url, '_self');
+    });
+
+    //EVENTOS CLICK EN LINK A PAGINAS PROYECTO
+    linkContainerParent.off('click').on('click', function() {
+        transitionInfoContent(linkContainerParent, textContainerParent);
+        let currentElementId = $(this).parent().siblings(".features").prop("id");
+        setTimeout(() => {
+            asingarUrl(currentElementId);
+            window.open(url, '_self');
+        }, 600);
     })
+
 
 
 
@@ -112,7 +113,7 @@ window.onload = function() {
         /*train.css("transform", "translateX(15.6vw)");*/
     });
     function hideFeatureBoxes(currentElement){
-        setTimeout(function(){
+        setTimeout(() => {
             currentElement.parent().css({"left":"0"});
             features.not(currentElement).parent().css("display", "none")
         }, 300); //.3s is the transition time of features. So when the feature trhansition ends we display them to none.
@@ -133,7 +134,7 @@ window.onload = function() {
                     currentElement.parent().css({"left":"75%"});
                     break;
             }
-            features.not(currentElement).parent().css("display", "flex")
+            features.not(currentElement).parent().css("display", "flex");
             features.css("opacity", "0.7"); //NOT WORKING BUGGED
         }, 1000); //.8s is the transition time of the info dropdown
     }
@@ -145,17 +146,16 @@ window.onload = function() {
     function removeFeaturesHoverClass(currentElement, delay){
         setTimeout(function(){
             currentElement.removeClass("features-click-class");
-            featuresText.css("transform", "translateY(-20vh)");
             hiddenFeatures = false;
         }, delay); //.8s is the transition time of the info dropdown
     }
     function load() {
-        innerLoader.width("100%")
+        innerLoader.width("100%");
         let width = 0;
         let id = setInterval(frame, 10);
         function frame() {
             outerLoader.find("p").html(Math.round(width) + "%");
-            if (width == 100) {
+            if (width === 100) {
                 clearInterval(id);
             } else { //getting the width on %
                 width = innerLoader.width() / innerLoader.parent().width() * 100;
@@ -163,7 +163,6 @@ window.onload = function() {
         }
     }
     function playVideo(videoIndex) {
-        video[videoIndex].style.height = "calc(30vh * 1.2)";
         video[videoIndex].play();
         video[videoIndex].style.opacity = "1";
     }
@@ -176,14 +175,28 @@ window.onload = function() {
     }
     function showText(){
         setTimeout(function(){
-            textContainerParent.css("position", "static");
-            textContainerParent.css("opacity", "1");
+            textContainerParent.css({"position" : "static", "opacity" : "1"});
+            linkContainerParent.css("opacity" , "1");
         }, 1000)
     }
-    function hideText(){ //SOLVE THIS ISSUE
-        setTimeout(function(){
-            textContainerParent.css("position", "absolute");
-            textContainerParent.css("opacity", "0");
-        }, 600)
+    function hideText(){ //SOLVE THIS ISSUE ->> ADD THIS --> //textContainerParent.css("position" , "absolute"); -->> AFTER A .3 TIMEOUT, after transitions have applied.
+        textContainerParent.css({"width" : textContainerParent.width(), "opacity" : "0"});
+        linkContainerParent.css("opacity" , "0");
     }
-}
+    function asingarUrl(currentElement){
+        switch (currentElement) {
+            case "features-first": url = 'enDirecto.html';
+                break;
+            case "features-second": url = 'grafica.html';
+                break;
+            case "features-third": url = 'sandobox.html';
+                break;
+            case "features-forth": url = 'aboutUs.html';
+                break;
+        }
+    }
+    function transitionInfoContent(currentElementLink, currentElementText){
+        currentElementLink.css({"transform" : "translateX(400%)", "opacity" : "0"});
+        currentElementText.css({"transform" : "translateX(100%)", "opacity" : "0"});
+    }
+};
