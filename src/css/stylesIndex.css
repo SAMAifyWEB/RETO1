@@ -149,14 +149,14 @@ main {
     background-size: cover;
 }
 #features-third {
-    background: url(../img/developers.jpg) no-repeat center;
+    background: url(../img/metro.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #features-forth {
-    background: url(../img/metro.jpg) no-repeat center;
+    background: url(../img/developers.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -181,6 +181,9 @@ main {
     opacity: 1 !important;
 }
 .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: auto;
     width: 0;
     background-color: white;
@@ -194,6 +197,30 @@ main {
     opacity: 0;
     transition: .3s ease-in;
 }
+
+.text-container-parent{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    opacity: 0;
+    color: black;
+    padding: 0 20%;
+    transition: .5s ease-in;
+}
+.title-container{}
+.description-container{}
+.link-container-parent{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.link-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /*TRAIN LINE*/
 
 /*position absolute into static need for transitioning display none to block effect*/

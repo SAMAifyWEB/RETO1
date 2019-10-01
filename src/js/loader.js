@@ -10,6 +10,7 @@ window.onload = function() {
     let features = $(".features");
     let logo = $("#logo-samaify");
     let featuresText = $(".features-text");
+    let textContainerParent = $(".text-container-parent");
     let train = $(".train");
     let video = document.getElementsByClassName("video");
 
@@ -70,6 +71,7 @@ window.onload = function() {
             showFeatureBoxes($(this));
             removeFeaturesHoverClass($(this), 800);
             stopVideo(videoIndex, 800);
+            hideText();
         }
         else{
             features.not($(this)).css("opacity", "0");
@@ -83,9 +85,25 @@ window.onload = function() {
                 createDesplegableInfo($(this), 900);
             }
             playVideo(videoIndex);
+            showText();
             hiddenFeatures = true;
         }
     });
+
+    //EVENTOS DOBLE CLICK EN FEATURES
+    features.off('dblclick').on('dblclick', function() {
+        switch ($(this).prop("id")) {
+            case "features-first": url = 'enDirecto.html';
+                break;
+            case "features-second": url = 'grafica.html';
+                break;
+            case "features-third": url = 'sandobox.html';
+                break;
+            case "features-forth": url = 'aboutUs.html';
+                break;
+        }
+        window.open(url, '_self');
+    })
 
 
 
@@ -155,5 +173,17 @@ window.onload = function() {
             video[videoIndex].pause();
             video[videoIndex].style.opacity = "0";
         }, delay);
+    }
+    function showText(){
+        setTimeout(function(){
+            textContainerParent.css("position", "static");
+            textContainerParent.css("opacity", "1");
+        }, 1000)
+    }
+    function hideText(){ //SOLVE THIS ISSUE
+        setTimeout(function(){
+            textContainerParent.css("position", "absolute");
+            textContainerParent.css("opacity", "0");
+        }, 600)
     }
 }
