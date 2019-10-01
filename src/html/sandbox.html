@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/navegadorReto1.css">
+    <link rel="stylesheet" type="text/css" href="../css/sandbox.css">
+</head>
+<body>
+<div id="menu">
+    <div id="logo">
+        <a href="">SAMAify</a>
+        <hr>
+    </div>
+    <ul>
+        <li>
+            <a href="">
+                <p><img src="../imagenes/tranvia.png"> animacion</p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p><img src="../imagenes/estadisticas.png">estadisticas</p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p><img src="../imagenes/modificar.png"> sandbox</p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p><img src="../imagenes/aboutUs.png" class="aboutUs"> About us</p>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="content">
+    <h2>Datos</h2>
+    <form action="ejemplo.php" method="post">
+        <div id="datos">
+
+            <!--
+            <label class="espacio">Posición actual: </label>
+            De esta forma visualizamos el valor de contador
+            <label class="espacio">Contador= :="mis_datos".contador</label>
+            -->
+
+            <label class="espacio">Posición actual: </label>
+            <!--
+            input name = nombre de la variable de tiaPortal
+            ejem: '"mis_datos".contador'
+            -->
+            <input type="text" class="mediano" name="posicionActual" size="40">
+
+            <label class="espacio">Aceleración: </label>
+            <input type="text" class="mediano" name="aceleracion">
+
+            <label class="espacio">Número de paradas:</label>
+            <input type="text" class="mediano" name="numparadas"><br>
+
+            <label class="espacio">Tiempo entre paradas: </label>
+            <input type="text" class="mediano" name="numparadas">
+
+            <label class="espacio">Tiempo del recorrido: </label>
+            <input type="text" class="mediano" name="numparadas">
+
+        </div>
+        <div >
+            <p>
+                <input class="boton" type="button" value="Iniciar">
+                <input class="boton" type="button" value="Parar">
+                <input class="boton" type="submit" value="Cambiar valores">
+            </p>
+        </div>
+    </form>
+    <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
+    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+    <h3>Resize the browser window to see the effect.</h3>
+    <div id="linea">
+
+    </div>
+
+    <h2>Animacion</h2>
+    <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
+    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+    <h3>Algo despues de la animacion</h3>
+    
+</div>
+
+</body>
+</html>
