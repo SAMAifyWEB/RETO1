@@ -65,7 +65,7 @@ main {
     height: 20px;
     border-radius: inherit;
     background-color: var(--main-color-faded);
-    transition: width .1s;
+    transition: width 4.1s;
     transition-timing-function: cubic-bezier(0, .6, .9, 0.1);
     color: white;
 }
@@ -149,14 +149,14 @@ main {
     background-size: cover;
 }
 #features-third {
-    background: url(../img/developers.jpg) no-repeat center;
+    background: url(../img/metro.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #features-forth {
-    background: url(../img/metro.jpg) no-repeat center;
+    background: url(../img/developers.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -164,8 +164,6 @@ main {
 }
 .features-click-class {
     opacity: 1 !important;
-    width: calc(20vw * 1.2);
-    height: calc(30vh * 1.2);
     box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px rgba(34, 239, 196, 0.2), 0 0 23px rgba(34, 239, 196, 0.2), 0 0 30px rgba(34, 239, 196, 0.2), 0 0 40px rgba(34, 239, 196, 0.2), 0 0 50px rgba(34, 239, 196, 0.2);
 }
 .features-text {
@@ -174,17 +172,21 @@ main {
     color: white;
     opacity: 0.7;
     transition: all .5s ease-in-out;
-    transform: translateY(-20vh);
+    transform: translateY(-19vh);
     user-select: none;
 }
 .features:hover, .features:hover .features-text {
     opacity: 1 !important;
 }
 .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: auto;
     width: 0;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     transition: .8s ease-in;
+    overflow: hidden;
 }
 .video{
     position: absolute;
@@ -194,6 +196,57 @@ main {
     opacity: 0;
     transition: .3s ease-in;
 }
+
+.text-container-parent{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    opacity: 0;
+    color: rgb(51, 51, 51);
+    padding: 0 10%;
+    transition: opacity .4s ease-in, transform .7s ease-in;
+    width: 75%;
+}
+.title-container{
+    font-weight: 400;
+    font-size: 30px;
+}
+.title-container p{
+    margin: 0;
+    padding: 0;
+}
+.description-container{
+    font-weight: 300;
+}
+.link-container-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    transition: opacity .4s ease-in, transform .7s ease-in;
+    opacity: 0;
+}
+.link-container-parent:hover{
+    cursor: pointer;
+}
+.link-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10%;
+}
+.link-text{
+    color: #417f2e;
+    font-size: 14px;
+    font-weight: 400;
+    width: 70%;
+}
+.flecha{
+    width: 30%;
+}
+
+
+
 /*TRAIN LINE*/
 
 /*position absolute into static need for transitioning display none to block effect*/
