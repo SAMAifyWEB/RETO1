@@ -10,7 +10,7 @@ html, body {
     font-size: 20px;
 }
 html {
-    background: url(img/tram.png) no-repeat center center fixed;
+    background: url(../img/tram.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -135,28 +135,28 @@ main {
     transition: opacity .8s ease-in;
 }
 #features-first {
-    background: url(img/night.jpg) no-repeat center;
+    background: url(../img/night.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #features-second {
-    background: url(img/stats.png) no-repeat center;
+    background: url(../img/stats.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #features-third {
-    background: url(img/developers.jpg) no-repeat center;
+    background: url(../img/developers.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #features-forth {
-    background: url(img/metro.jpg) no-repeat center;
+    background: url(../img/metro.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
