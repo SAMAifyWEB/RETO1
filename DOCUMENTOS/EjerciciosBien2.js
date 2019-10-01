@@ -118,7 +118,7 @@ function calcSueldo(sueldo,años){
         alert("el nuevo sueldo a pagar seria: "+(sueldo+(sueldo*0.2)))
     else if (sueldo<500 && años<10)
         alert("el nuevo sueldo a pagar seria: "+(sueldo+(sueldo*0.1)))
-    else if (sueldo>=500)
+    else
         alert("sueldo sin cambios: "+sueldo)
 }
 
