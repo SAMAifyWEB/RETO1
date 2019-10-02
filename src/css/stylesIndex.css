@@ -65,7 +65,7 @@ main {
     height: 20px;
     border-radius: inherit;
     background-color: var(--main-color-faded);
-    transition: width 4.1s;
+    transition: width .1s;
     transition-timing-function: cubic-bezier(0, .6, .9, 0.1);
     color: white;
 }
@@ -240,6 +240,7 @@ main {
     font-size: 14px;
     font-weight: 400;
     width: 70%;
+    text-align: right;
 }
 .flecha{
     width: 30%;
@@ -247,52 +248,4 @@ main {
 
 
 
-/*TRAIN LINE*/
 
-/*position absolute into static need for transitioning display none to block effect*/
-
-#train-line {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    opacity: 0;
-    width: 50vw;
-    height: 50vh;
-    transition: opacity 1s ease-in;
-    transform: translateY(-6vw) translateX(3vw);
-}
-.lines {
-    display: flex;
-    align-items: center;
-    width: 450px;
-    height: 10px;
-    background-color: var(--main-color);
-    border-radius: 40px;
-}
-#line2 {
-    transform: rotate(40deg) translateY(5.5vw) translateX(1.6vw);
-}
-#line3 {
-    transform: translateY(10.5vw) translateX(-4.6vw);
-}
-.train {
-    width: 25px;
-    height: 25px;
-    transform: translateX(-50%);
-    transition: 8s linear;
-    background-color: var(--main-color);
-    border-radius: 40px;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-@-webkit-keyframes glow {
-    from {
-        box-shadow: 0 0 10px gray, 0 0 20px gray, 0 0 30px #22efc4, 0 0 40px #22efc4, 0 0 50px #22efc4, 0 0 60px #22efc4, 0 0 70px #22efc4;
-        opacity: 1;
-    }
-    to {
-        box-shadow: 0 0 20px gray, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green, 0 0 80px green;
-        opacity: 0.9;
-    }
-}
