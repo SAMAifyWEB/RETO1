@@ -3,37 +3,42 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script type="text/javascript" src="../js/Navegador.js"></script>
 </head>
 <body>
 	<header>
-		<div id="menu">
-		<div id="logoMenu">
-		    <a href="">SAMAify</a>
-	        <hr>
-	    </div>
-	    <ul>
-	         <li>
-	            <a href="index.html">
-	             	<p><img src="../img/tranvia.png"> animacion</p>
-	            </a>
-	        </li>
-	        <li>
-	            <a href="grafica.html">
-	              <p><img src="../img/estadisticas.png">estadisticas</p>
-	            </a>
-	        </li>
-	        <li>
-	            <a href="sandbox.html">
-	              <p><img src="../img/modificar.png"> sandbox</p>
-	            </a>
-	        </li>
-	        <li>
-	            <a href="aboutUs.html">
-	              <p><img src="../img/aboutUs.png" class="aboutUs"> About us</p>
-	            </a>
-	        </li>
-        </ul>
-      </div>
+			<div id="logoMenu">
+					<img id="imgMenu" src="../img/menu.png">
+			   		 <a id="tituloMenu" href="">SAMAify</a>
+		        	<hr>
+		   	</div>
+		    <nav>
+			    <ul>
+			         <li>
+			            <a href="index.html">
+			             	<p><img src="../img/tranvia.png"> animacion</p>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="grafica.html">
+			              <p><img src="../img/estadisticas.png">estadisticas</p>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="sandbox.html">
+			              <p><img src="../img/modificar.png"> sandbox</p>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="aboutUs.html">
+			              <p><img src="../img/aboutUs.png" class="aboutUs"> About us</p>
+			            </a>
+			        </li>
+		        </ul>
+	        </nav>
+    </header>
 		<div id="menuHorizontal">
 			<img id="logo" src="../img/Logo%20SAMAify.png">
 			<ul>
@@ -43,7 +48,7 @@
 				<a href="#contacto"><li>Contactanos</li></a>
 			</ul>
 		</div>
-	</header>
+	
 	<div id="panelAbajo">
 		<h1>Dreams inside you</h1>
 		<div class="horizontal"></div>
@@ -157,7 +162,6 @@
 				<input type="text" name="telefono" placeholder="Telefono"><br>
 				<textarea placeholder="Introduce tu mensaje"></textarea><br>
 				<button>
-					<img src="../img/enviar.png">
 					Enviar
 				</button>
 			</form> 

@@ -18,31 +18,48 @@ body {
     background-color: #F4F4F4;
 }
 
-#menu {
+header nav{
     width: 15%;
     position: fixed;
-    height: 100%;
     background-color: #f96332;
+    height: 100%;
+}
+
+#logoMenu a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+header {
+    width: 15%;
+    background-color: #f96332;
+    position: fixed;
 }
 
 #logoMenu {
-    padding: 0.5rem 0.7rem;
+    padding: 2rem 1rem 0.7rem 0.7rem;
     font-size: 1.5em;
+    
     text-align: center;
+    
+} 
+
+#imgMenu {
+    visibility: hidden;
 }
 
-#menu ul {
+header nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-#menu p {
+header p {
     margin: 0;
     line-height: 30px;
     padding-left: 10px;
 }
 
-#menu a {
+header nav ul a {
     margin: 10px 15px 0;
     border-radius: 30px;
     color: #FFFFFF;
@@ -53,33 +70,33 @@ body {
     transition: all 1000ms ease 0s;
 }
 
-#menu hr {
+header hr {
     height: 0.1px;
     width: 85%;
     background-color: #FFFFFF;
 }
 
-#menu ul a:hover {
+header nav ul a:hover {
     background-color: rgba(255,255,255,0.2);
     transition: all 200ms ease 0s;
 }
 
-#menu ul img {
+header nav ul img {
     width: 25px;
     height: auto;
     margin-right: 20px;
 }
 
-#menu ul a:active {
+header nav ul a:active {
     background-color: #FFFFFF;
     color: #f96332;
 }
 
 #logo {
     position: absolute;
-    top: 50px;
-    right: 150px;
-    width: 500px;
+    top: 150px;
+    width: 25%;
+    right: 100px;
 }
 
 #menuHorizontal {
@@ -171,6 +188,10 @@ h4 {
     margin:10px;
 }
 
+.columna ul {
+    width: 100%;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -207,7 +228,7 @@ h4 {
 
 #Fortalezas {
     width: 100%;
-    height: 600px;
+    height: auto;
     display: flex;
     margin: 75px 0px 150px 0px;
 }
@@ -240,15 +261,6 @@ h4 {
     height: 300px;
 }
 
-
-.mas {
-    width: 100px;
-    position: relative;
-    bottom: 200px;
-    left: 140px;
-    visibility: hidden;
-}
-
 .columna2 p {
     padding-left: 15px;
 }
@@ -260,7 +272,6 @@ h4 {
 #quienesSomos .persona {
     width: 100%;
     height: auto;
-    transition: transform ease 1500ms;
 }
 
 .text{
@@ -274,10 +285,8 @@ h4 {
 }
 
 .persona:hover{
-    transform:scale(0.5);
-    border-radius: 50%;
-    position: relative;
-    bottom: 100px;
+    opacity: 0;
+    transition: opacity 500ms;
 }
 
 #headerEquipo {
@@ -380,6 +389,96 @@ footer img {
     font-size:14px;
     margin-bottom: 30px;
 }
+@media screen and (max-width: 1200px) and (min-width: 901px) {
+    #quienesSomos {
+        height: 900px;
+    }
+    
+    .columna2 {
+        margin-right: 13px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 900px) {
+#quienesSomos {
+        height: 900px;
+    }
+
+    .columna2 {
+        margin-right: 14px;
+    }
+
+    #logoMenu {
+        width: 100%;
+        height: 10%;
+        display: block;
+        position: fixed;
+        background: #f96332;
+        z-index: 1;
+        padding: 15px;
+    }
+    
+
+    #logoMenu hr {
+        visibility: hidden;
+    }
+
+    #tituloMenu {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    header nav {
+        padding-top: 100px;
+        display: block;
+        width: 80%;
+        height: 100%;
+        left: -100%;
+        position: fixed;
+        margin: 0;
+        background: #f96332;
+    }
+
+    header ul li {
+        display: block;
+        float: none;
+        border-bottom:1px solid rgba(255,255,255,.5);
+    }
+
+    #imgMenu {
+        visibility: visible;
+        float: right;
+        margin-top: 18px;
+        width: 40px;
+    }
+    #imgMenu:hover {
+        cursor: pointer;
+    }
+
+    #menuHorizontal {
+        width: 100%;
+    }
+
+    #logo {
+        visibility: hidden;
+    }
+
+    #panelAbajo {
+        width: 100%;
+    }
+
+    #informacion {
+        padding: 50px 100px 0px 50px;
+    }
+
+}
 
 /*SANDBOX*/
 
@@ -399,6 +498,7 @@ footer img {
     height: 1px;
     margin-right: 40px;
 }
+
 .boton{
 
     padding: 5px;
