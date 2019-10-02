@@ -501,3 +501,36 @@ else if(hoy.getDate() - fecha.getDate() < 0) {
 alert("Tu edad dentro de 5 años es de "+(edad+5)+" años");
 
 
+//automata
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STEP 0.0</title>
+	<script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <h1>STEP 0.0</h1>
+	<p>:="mis_datos".holaMundo:</p>
+	<p>:="mis_datos".contador:</p>
+
+	<h1>Escribir datos</h1>
+	<p>Contador = :="mis_datos".contador:</p>
+     <form method="post">
+       <input name='"mis_datos".contador' type="text" />
+       <button type="submit">Cambiar</button>
+     </form>
+	 
+	 <p>Valor: <label id="etiqueta"></label></p>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	setInterval(actualizar,500);
+	})
+	function actualizar(){
+	$("#etiqueta").load("leer_variable.html");
+	}
+	</script>
+	 
+</body>
+</html>
+
