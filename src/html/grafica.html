@@ -4,50 +4,56 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <script type="text/javascript" src="../js/Chart.js"></script>
-    <link rel="stylesheet" type="text/css" href="../Navegador%20Reto1/navegadorReto1.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="../js/Navegador.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <title>Grafica</title>
 </head>
 <body>
 
-<div id="menu">
-    <div id="logoMenu">
-        <a href="">SAMAify</a>
-        <hr>
+    <header>
+        <div id="logoMenu">
+            <img id="imgMenu" src="../img/menu.png">
+            <a id="tituloMenu" href="">SAMAify</a>
+            <hr>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <p><img src="../img/tranvia.png"> animacion</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="grafica.html">
+                        <p><img src="../img/estadisticas.png">estadisticas</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="sandbox.html">
+                        <p><img src="../img/modificar.png"> sandbox</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="aboutUs.html">
+                        <p><img src="../img/aboutUs.png" class="aboutUs"> About us</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <h2>Responsive Sidebar Example</h2>
+        <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or
+            less.</p>
+        <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the
+            navigation links.</p>
+        <h3>Resize the browser window to see the effect.</h3>
+        <canvas id="miGrafica" width="400" height="300" id="miGrafica"></canvas>
     </div>
-    <ul>
-    <li>
-        <a href="index.html">
-          <p><img src="../img/tranvia.png"> animacion</p>
-         </a>
-     </li>
-    <li>
-        <a href="grafica.html">
-         <p><img src="../img/estadisticas.png">estadisticas</p>
-         </a>
-    </li>
-     <li>
-         <a href="sandbox.html">
-        <p><img src="../img/modificar.png"> sandbox</p>
-         </a>
-     </li>
-     <li>
-         <a href="aboutUs.html">
-         <p><img src="../img/aboutUs.png" class="aboutUs"> About us</p>
-         </a>
-      </li>
-</div>
-<div class="content">
-    <h2>Responsive Sidebar Example</h2>
-    <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or
-        less.</p>
-    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the
-        navigation links.</p>
-    <h3>Resize the browser window to see the effect.</h3>
-    <canvas id="miGrafica" width="400" height="300" id="miGrafica"></canvas>
-</div>
 
 
-<script type="text/javascript" src="../js/grafica.js"></script>
+    <script type="text/javascript" src="../js/grafica.js"></script>
 </body>
 </html>

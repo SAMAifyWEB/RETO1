@@ -327,7 +327,6 @@ form {
 
 button {
     background-color: #827ffe;
-    width: 11%;
 }
 
 button:hover {
@@ -398,16 +397,15 @@ footer img {
         margin-right: 13px;
     }
     
-    
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (min-width: 600px) {
 #quienesSomos {
-        height: 900px;
+        height: 800px;
     }
 
     .columna2 {
-        margin-right: 14px;
+        margin-right: 0;
     }
 
     #logoMenu {
@@ -476,6 +474,113 @@ footer img {
 
     #informacion {
         padding: 50px 100px 0px 50px;
+    }
+}
+
+@media screen and (max-width: 599px) and (min-width: 400px) {
+    #quienesSomos {
+        height: 600px;
+    }
+
+    #quienesSomos{
+        font-size: 14px;
+    }
+
+    .columna2 {
+        margin-right: 0;
+        height: 200px;
+    }
+
+    #logoMenu {
+        width: 100%;
+        height: 10%;
+        display: block;
+        position: fixed;
+        background: #f96332;
+        z-index: 1;
+    }
+
+    #logoMenu hr {
+        visibility: hidden;
+    }
+
+    header nav {
+        padding-top: 100px;
+        display: block;
+        width: 80%;
+        height: 100%;
+        left: -100%;
+        position: fixed;
+        margin: 0;
+        background: #f96332;
+    }
+
+    #tituloMenu {
+        visibility: hidden;
+    }
+
+    #imgMenu {
+        visibility: visible;
+        float: right;
+        width: 40px;
+        margin: 0 auto;
+    }
+    #imgMenu:hover {
+        cursor: pointer;
+    }
+
+    #menuHorizontal {
+        background: none;
+        height: 450px;
+    }
+
+    #menuHorizontal ul li{
+        display: inline-block;
+        font-size: 14px;
+        padding:5px;
+    }
+
+    #menuHorizontal ul li:hover {
+        background: #827ffe;
+    }
+
+    #menuHorizontal {
+        width: 100%;
+    }
+
+    #menuHorizontal ul li  {
+        color: black;
+    }
+
+    #panelAbajo {
+        width: 100%;
+    }
+
+    #logo {
+        z-index: -1;
+        top: 100px;
+        width: 300px;
+        left: 65px;
+    }
+
+    #servicios {
+        display: block;
+    }
+
+    .columna {
+        width: 100%;
+    }
+
+    #fortaleza p {
+        visibility: hidden;
+    }
+
+    footer img{
+        width: 50px;
+    }
+
+    footer {
+        height: 100px;
     }
 
 }
