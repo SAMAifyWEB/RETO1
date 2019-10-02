@@ -408,5 +408,51 @@ footer img {
     border-radius: 10px;
     border: 1px solid #f96332;
 }
+/*TRAIN LINE*/
+
+#train-line {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    width: 50vw;
+    height: 50vh;
+    transition: opacity 1s ease-in;
+    transform: translateY(-6vw) translateX(3vw);
+}
+.lines {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: 10px;
+    background-color: var(--main-color);
+    border-radius: 40px;
+}
+#line2 {
+    transform: rotate(40deg) translateY(5.5vw) translateX(1.6vw);
+}
+#line3 {
+    transform: translateY(10.5vw) translateX(-4.6vw);
+}
+.train {
+    width: 25px;
+    height: 25px;
+    transform: translateX(-50%);
+    transition: 8s linear;
+    background-color: var(--main-color);
+    border-radius: 40px;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 10px gray, 0 0 20px gray, 0 0 30px #22efc4, 0 0 40px #22efc4, 0 0 50px #22efc4, 0 0 60px #22efc4, 0 0 70px #22efc4;
+        opacity: 1;
+    }
+    to {
+        box-shadow: 0 0 20px gray, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green, 0 0 80px green;
+        opacity: 0.9;
+    }
+}
 
 

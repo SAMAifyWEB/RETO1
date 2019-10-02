@@ -5,13 +5,11 @@ window.onload = function() {
     let innerLoader = $("#inner-loader");
     let loadingText = $("#loading-text");
     let content = $("#content");
-    let trainLine = $("#train-line");
     let featuresContainer = $("#features-container");
     let features = $(".features");
     let logo = $("#logo-samaify");
     let textContainerParent = $(".text-container-parent");
     let linkContainerParent = $(".link-container-parent");
-    let train = $(".train");
     let url;
     let video = document.getElementsByClassName("video");
 
@@ -47,8 +45,6 @@ window.onload = function() {
             featuresContainer.css({"position" : "static", "opacity" : "1"});
             features.css("opacity", "0.7");
             logo.css("opacity", "1");
-            /*trainLine.css("position", "static");
-            trainLine.css("opacity", "0.6");*/
         }
     });
     features.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
@@ -107,11 +103,6 @@ window.onload = function() {
 
 
 
-
-    /*TRAIN ANIMATION*/
-    trainLine.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
-        /*train.css("transform", "translateX(15.6vw)");*/
-    });
     function hideFeatureBoxes(currentElement){
         setTimeout(() => {
             currentElement.parent().css({"left":"0"});
@@ -179,9 +170,11 @@ window.onload = function() {
             linkContainerParent.css("opacity" , "1");
         }, 1000)
     }
-    function hideText(){ //SOLVE THIS ISSUE ->> ADD THIS --> //textContainerParent.css("position" , "absolute"); -->> AFTER A .3 TIMEOUT, after transitions have applied.
-        textContainerParent.css({"width" : textContainerParent.width(), "opacity" : "0"});
+    function hideText(){
+        textContainerParent.css("width", textContainerParent.width(), "important");
+        textContainerParent.css("opacity", "0");
         linkContainerParent.css("opacity" , "0");
+        setTimeout(() => textContainerParent.css("position" , "absolute"), 400);
     }
     function asingarUrl(currentElement){
         switch (currentElement) {
