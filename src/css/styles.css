@@ -412,21 +412,24 @@ footer img {
 
 #train-line {
     display: flex;
+    justify-content: center;
     align-items: center;
+    margin: 0 auto;
     opacity: 1;
     width: 50vw;
     height: 50vh;
     transition: opacity 1s ease-in;
-    transform: translateY(-6vw) translateX(3vw);
 }
 .lines {
     display: flex;
     align-items: center;
     width: 450px;
     height: 10px;
-    background-color: var(--main-color);
+    background-color: #40a08a;
     border-radius: 40px;
+    position: relative;
 }
+
 #line2 {
     transform: rotate(40deg) translateY(5.5vw) translateX(1.6vw);
 }
@@ -436,13 +439,21 @@ footer img {
 .train {
     width: 25px;
     height: 25px;
-    transform: translateX(-50%);
-    transition: 8s linear;
-    background-color: var(--main-color);
+    transition: 1s linear;
+    background-color: #40a08a;
     border-radius: 40px;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    position: absolute;
+    left: 0;
+}
+#train1{
+    //Meter lo siguiente con js en casa train
+    /*-webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;*/
+}
+#train2{
+    transform: translateX(-30%);
+    opacity: 0;
 }
 @-webkit-keyframes glow {
     from {
