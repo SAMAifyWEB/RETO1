@@ -1,9 +1,13 @@
+<!-- AWP_In_Variable Name='"mis_datos".contador' -->
+<!-- AWP_In_Variable Name='"mis_datos".Aceleracion' -->
+<!-- AWP_In_Variable Name='"mis_datos".Velocidad' -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <script type="text/javascript" src="../js/Chart.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 
     <title>Grafica</title>
 </head>
@@ -17,22 +21,22 @@
     <ul>
         <li>
             <a href="">
-                <p><img src="../img/tranvia.png"> animacion</p>
+                <p><img src="tranvia.png"> animacion</p>
             </a>
         </li>
         <li>
             <a href="">
-                <p><img src="../img/estadisticas.png">estadisticas</p>
+                <p><img src="estadisticas.png">estadisticas</p>
             </a>
         </li>
         <li>
             <a href="">
-                <p><img src="../img/modificar.png"> sandbox</p>
+                <p><img src="modificar.png"> sandbox</p>
             </a>
         </li>
         <li>
             <a href="">
-                <p><img src="../img/aboutUs.png" class="aboutUs"> About us</p>
+                <p><img src="aboutUs.png" class="aboutUs"> About us</p>
             </a>
         </li>
     </ul>
@@ -45,7 +49,7 @@
         navigation links.</p>
     <h3>Resize the browser window to see the effect.</h3>
     <canvas id="miGrafica" width="400" height="300" id="miGrafica"></canvas>
-	<p>:="mis_datos".contador:</p>
+    <p>Valores: <label id="valores"></label></p>
 </div>
 
 <script type="text/javascript" src="../js/grafica.js"></script>
