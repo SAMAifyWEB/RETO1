@@ -1,3 +1,6 @@
+//	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+
 //3
 var textoinic=" Presentamos el producto"; //no puede tener un punto en el nombre de la variable
 var aux=4,numero ,aux1="ana"; //Variable con la primera un Numero no se puede.
