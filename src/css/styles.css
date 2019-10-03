@@ -39,13 +39,13 @@ header {
 #logoMenu {
     padding: 2rem 1rem 0.7rem 0.7rem;
     font-size: 1.5em;
-    
+    height: 100%;
     text-align: center;
     
 } 
 
 #imgMenu {
-    visibility: hidden;
+    display: none;
 }
 
 header nav ul {
@@ -451,7 +451,7 @@ footer img {
     }
 
     #imgMenu {
-        visibility: visible;
+        display: block;
         float: right;
         margin-top: 18px;
         width: 40px;
@@ -520,7 +520,7 @@ footer img {
     }
 
     #imgMenu {
-        visibility: visible;
+        display: block;
         float: right;
         width: 40px;
         margin: 0 auto;
@@ -548,8 +548,14 @@ footer img {
         width: 100%;
     }
 
+    #menuHorizontal ul{
+        padding: 0;
+        width: 100%;
+    }
+
     #menuHorizontal ul li  {
         color: black;
+        padding: 10px;
     }
 
     #panelAbajo {
@@ -583,6 +589,45 @@ footer img {
         height: 100px;
     }
 
+    #datos input {
+        width: 85%;
+        margin-bottom: 30px;
+    }
+
+    .content {
+        margin-top: 70px;
+        width: 100%;
+    }
+
+    .textFortaleza {
+        display: none;
+        text-align: center;
+    }
+
+    #imagenes {
+        display: none;
+    }
+
+    .columna {
+        width: auto;
+    }
+
+    #informacion{
+        width: 100%;
+    }
+
+    .fortaleza{
+        border-bottom: 2px solid #FFFFFF;
+        width: 100%;
+    }
+
+    #textoEquipo{
+        font-size: 14px;
+    }
+
+    #imgAdrian {
+        margin-top: 18px;
+    }
 }
 
 /*SANDBOX*/
@@ -605,13 +650,11 @@ footer img {
 }
 
 .boton{
-
     padding: 5px;
     font-size: 15px;
     color: #ffffff;
     background-color: #f96332;
     border-radius: 10px;
-    border: 1px solid #f96332;
 }
 
 
