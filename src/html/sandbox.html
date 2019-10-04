@@ -8,62 +8,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="jquery-3.2.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="navegadorReto1.css">
-    <link rel="stylesheet" type="text/css" href="sandbox.css">
-    <script type="text/javascript" src="sandbox.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="../js/Navegador.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript" src="../js/NavegadorTransicion.js"></script>
 </head>
 <body>
-<div id="menu">
-    <div id="logo">
-        <a href="">SAMAify</a>
+<header>
+    <div id="logoMenu">
+        <img id="imgMenu" src="../img/menu.png">
+        <a id="tituloMenu" href="">SAMAify</a>
         <hr>
     </div>
-    <ul>
-        <li>
-            <a href="">
-                <p><img src="../imagenes/tranvia.png"> animacion</p>
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <p><img src="../imagenes/estadisticas.png">estadisticas</p>
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <p><img src="../imagenes/modificar.png"> sandbox</p>
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <p><img src="../imagenes/aboutUs.png" class="aboutUs"> About us</p>
-            </a>
-        </li>
-    </ul>
-</div>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">
+                    <p><img src="../img/tranvia.png"> animacion</p>
+                </a>
+            </li>
+            <li>
+                <a href="grafica.html">
+                    <p><img src="../img/estadisticas.png">estadisticas</p>
+                </a>
+            </li>
+            <li>
+                <a href="sandbox.html">
+                    <p><img src="../img/modificar.png"> sandbox</p>
+                </a>
+            </li>
+            <li>
+                <a href="aboutUs.html">
+                    <p><img src="../img/aboutUs.png" class="aboutUs"> About us</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
 <div class="content">
     <h2>Datos</h2>
 
     <form method="post">
-        <input name='"mis_datos".contador' type="text" />
-        <button type="submit">Cambiar</button>
-    </form>
-
-    <form method="post">
         <div id="datos">
 
-            <p>:="mis_datos".posicionActual:</p>
+            <p>:="mis_datos".contador:</p>
             <p>:="mis_datos".aceleracion:</p>
+            <p>:="mis_datos".velocidad:</p>
+
             <p id="bool">:="mis_datos".iniciado:</p>
 
-            <label class="espacio">Posición actual: </label>
-            <input type="number" class="mediano" name='"mis_datos".posicionActual' />
+            <label class="espacio">contador: </label>
+            <input type="number" class="mediano" name='"mis_datos".contador'max="50" min="0"/>
 
+            <label class="espacio">aceleración: </label>
+            <input type="number" class="mediano" name='"mis_datos".aceleracion' max="4" min="1"/>
 
-            <label class="espacio">Aceleración: </label>
-            <input type="number" class="mediano" name='"mis_datos".aceleracion'/>
+            <label class="espacio">velocidad: </label>
+            <input type="number" class="mediano" name='"mis_datos".velocidad'/>
 
             <label class="espacio">Aceleración: </label>
             <input type="number" class="mediano" name='"mis_datos".iniciado'/>
@@ -80,9 +82,15 @@
         </div>
         <div >
             <p>
-                <input class="boton" type="button" value="Iniciar">
-                <input class="boton" type="button" value="Parar">
-                <input class="boton" type="submit" value="Cambiar valores">
+                <button>
+                    Iniciar
+                </button>
+                <button>
+                    Parar
+                </button>
+                <button>
+                    Cambiar Valores
+                </button>
             </p>
         </div>
     </form>
