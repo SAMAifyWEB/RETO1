@@ -1,7 +1,5 @@
 $(document).ready(function() {
-
 var contador = 1;
-
     $('#imgMenu').on("click", function(){
         if (contador == 1) {
             console.log("entro")
@@ -14,3 +12,7 @@ var contador = 1;
         }
     });
 });
+
+
+
+
