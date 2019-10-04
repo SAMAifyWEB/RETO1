@@ -1,6 +1,18 @@
+//documento usado unicmanete para la creacion de graficas
 let contador
 let velocidad
 let aceleracion
+let hoy = new Date();
+
+let hoyString = hoy.toISOString().substr(11,8);
+
+
+
+console.log(hoyString)
+
+console.log(typeof hoyString)
+
+
 
 $(document).ready(function () {
     setInterval(actualizar, 6000);
@@ -16,6 +28,13 @@ function actualizar() {
     aceleracion = parseInt(document.getElementById("aceleracion3").innerHTML)
     console.log("contador: " + contador)
     chart.data.datasets[0].data.push(contador)
+
+
+    hoy = new Date();
+
+    hoyString = hoy.toISOString().substr(11,8);
+
+    chart.data.labels.push(hoyString)
     chart.update();
 
 }
@@ -26,11 +45,11 @@ let miCanvas = document.getElementById("miGrafica").getContext("2d")
 let chart = new Chart(miCanvas, {
     type: "line",
     data: {
-        labels: ["Contador"],
+        labels: [],
         datasets: [
             {
                 label: "Grafica del tranvia",
-                backgroundColor: "rgb(0,0,0)",
+                backgroundColor: "rgb(255,0,0,0)",
                 borderColor: "rgb(0,250,0)",
                 borderWidth: 2.5,
                 data: []
