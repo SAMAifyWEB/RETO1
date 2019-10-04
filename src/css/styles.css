@@ -148,7 +148,7 @@ h1 {
 }
 
 .persona:hover + .text{
-    opacity: 1;
+    display: block;
 }
 
 
@@ -245,7 +245,7 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     width: 60%;
-    height: 1400px;
+    height: 1500px;
     margin: 0 auto;
     background-color: white;
     padding: 10px 0px 10px 30px;
@@ -276,12 +276,13 @@ h4 {
 
 .text{
     position: relative;
-    opacity: 0;
-    bottom: 200px;
+    display: none;
+    bottom: 400px;
     color: black;
-    display:block;
     width:100%;
     transition: border-radius 1000ms ease;
+    font-size: 20px;
+    color: #0085A1;
 }
 
 .persona:hover{
@@ -388,10 +389,11 @@ footer img {
     font-size:14px;
     margin-bottom: 30px;
 }
-@media screen and (max-width: 1200px) and (min-width: 901px) {
+@media screen and (max-width: 1200px) and (min-width: 951px) {
     #quienesSomos {
         height: 900px;
     }
+
     
     .columna2 {
         margin-right: 13px;
@@ -399,13 +401,18 @@ footer img {
     
 }
 
-@media screen and (max-width: 900px) and (min-width: 600px) {
-#quienesSomos {
-        height: 800px;
+@media screen and (max-width: 950px) and (min-width: 600px) {
+    #quienesSomos {
+        height: 900px;
+    }
+
+    .text {
+        bottom: 230px;
+        font-size: 16px;
     }
 
     .columna2 {
-        margin-right: 0;
+        margin-right: 10px;
     }
 
     #logoMenu {
@@ -442,6 +449,7 @@ footer img {
         position: fixed;
         margin: 0;
         background: #f96332;
+        transition: ease-in 1s;
     }
 
     header ul li {
@@ -475,6 +483,9 @@ footer img {
     #informacion {
         padding: 50px 100px 0px 50px;
     }
+    .content {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 599px) and (min-width: 400px) {
@@ -484,6 +495,11 @@ footer img {
 
     #quienesSomos{
         font-size: 14px;
+    }
+
+    .text {
+        bottom: 155px;
+        font-size: 12px;
     }
 
     .columna2 {
@@ -513,6 +529,7 @@ footer img {
         position: fixed;
         margin: 0;
         background: #f96332;
+        transition: ease-in 1s ;
     }
 
     #tituloMenu {
@@ -551,6 +568,7 @@ footer img {
     #menuHorizontal ul{
         padding: 0;
         width: 100%;
+        margin-left: 10px;
     }
 
     #menuHorizontal ul li  {
@@ -566,7 +584,7 @@ footer img {
         z-index: -1;
         top: 100px;
         width: 300px;
-        left: 65px;
+        left: 60px;
     }
 
     #servicios {
