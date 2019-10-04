@@ -3,5 +3,704 @@
 #miGrafica canvas{
     width: 200px;
     height: 150px;
+}
+
+.content {
+    width: 85%;
+    float: right;
+    padding: 50px;
+}
+
+/*ABOUT US*/
+body {
+    margin: 0;
+    font-family: Roboto;
+    background-color: #F4F4F4;
+}
+
+header nav{
+    width: 15%;
+    position: fixed;
+    background-color: #f96332;
+    height: 100%;
+}
+
+#logoMenu a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+header {
+    width: 15%;
+    background-color: #f96332;
+    position: fixed;
+}
+
+#logoMenu {
+    padding: 2rem 1rem 0.7rem 0.7rem;
+    font-size: 1.5em;
+    height: 100%;
+    text-align: center;
+    
+} 
+
+#imgMenu {
+    display: none;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header p {
+    margin: 0;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+header nav ul a {
+    margin: 10px 15px 0;
+    border-radius: 30px;
+    color: #FFFFFF;
+    display: block;
+    text-transform: uppercase;
+    padding: 10px 8px;
+    text-decoration: none;
+    transition: all 1000ms ease 0s;
+}
+
+header hr {
+    height: 0.1px;
+    width: 85%;
+    background-color: #FFFFFF;
+}
+
+header nav ul a:hover {
+    background-color: rgba(255,255,255,0.2);
+    transition: all 200ms ease 0s;
+}
+
+header nav ul img {
+    width: 25px;
+    height: auto;
+    margin-right: 20px;
+}
+
+header nav ul a:active {
+    background-color: #FFFFFF;
+    color: #f96332;
+}
+
+#logo {
+    position: absolute;
+    top: 150px;
+    width: 25%;
+    right: 100px;
+}
+
+#menuHorizontal {
+    background: url("../img/fondo2.jpg") no-repeat;
+    background-size: cover;
+    display: inline-flex;
+    width: 85%;
+    height: 750px;
+    float: right;
+    color: #0085A1;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#menuHorizontal ul li {
+    color: #FFFFFF;
+    list-style-type: none;
+    padding: 25px;
+    transition: all 1000ms ease 0s;
+    float: left;
+}
+
+#menuHorizontal li:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 15px;
+}
+
+#panelArriba {
+    height: 150px;
+    width: 85%;
+    float: right;
+    color: #0085A1;
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+    color: #0085A1;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.eslogan {
+    color: #0085A1;
+    font-size: 40px;
+    padding: 0px 0px 0px 20px;
+    margin-top: 100px ;
+}
+
+.persona:hover + .text{
+    opacity: 1;
+}
+
+
+h4 {
+    padding-left: 15px;
+}
+
+#panelAbajo {
+    color: #0085A1;
+    height: auto;
+    width: 85%;
+    float: right;
+    color: white;
+}
+
+.horizontal {
+    background-color: #0085A1;
+    border-radius: 30px;
+    height: 5px;
+    width: 5%;
+    margin:0px 0px 30px 30px;
+}
+
+#servicios {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 20px 0px 150px 0px;
+}
+
+.columna {
+    width: 33%;
+    height: auto;
+    background-color: white;
+    color: #0085A1;
+    padding: 20px;
+    margin:10px;
+}
+
+.columna ul {
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.columna img {
+    height: 50px;
+    width: auto;
+    display:block;
+    margin:auto;
+    margin-bottom: 40px;
+}
+
+
+#informacion {
+    width: 65%;
+    padding: 50px 250px 0px 100px;
+    background-color: #0085A1;
+}
+
+#imagenes {
+    padding: 15px;
+    width: 35%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#imagenes img {
+    width: 120px;
+    height: auto;
+}
+
+#Fortalezas {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 75px 0px 150px 0px;
+}
+
+.fortaleza {
+    margin-bottom: 75px;
+}
+
+#panelAbajo ul li {
+    padding: 15px;
+}
+
+#quienesSomos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    height: 1400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px 0px 10px 30px;
+    margin-bottom: 200px;
+    margin-top: 75px;
+}
+
+.columna2 {
+    margin-right: 15px;
+    width: 47%;
+    background-color: white;
+    color: #0085A1;
+    height: 300px;
+}
+
+.columna2 p {
+    padding-left: 15px;
+}
+
+.columna li {
+    list-style-type: square;
+}
+
+#quienesSomos .persona {
+    width: 100%;
+    height: auto;
+}
+
+.text{
+    position: relative;
+    opacity: 0;
+    bottom: 200px;
+    color: black;
+    display:block;
+    width:100%;
+    transition: border-radius 1000ms ease;
+}
+
+.persona:hover{
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+#headerEquipo {
+    padding: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+#float h2 {
+    color: #0085A1;
+    font-size: 40px;
+    padding: 0px 0px 0px 20px;
+}
+
+#textoEquipo {
+    color: #0085A1;
+    width: 40%;
+    font-size: 20px;
+    float: right;
+}
+
+#formulario {
+    max-width: 1000px;
+    height: 500px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    color: blue;
+}
+
+form {
+    text-align: center;
+    padding-top: 20px;
+}
+
+button {
+    background-color: #827ffe;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input,textarea,button {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    transition: transform ease 1000ms
+}
+
+input,textarea {
+    width: 50%;
+}
+
+textarea {
+    height: 150px;
+}
+
+input:hover,textarea:hover,button:hover {
+    transform:  scale(1.1);
+}
+
+#formulario form img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+footer {
+    margin: 150px 0px 50px 0px;
+    background-color: #FFFFFF;
+    height: 200px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 80px;
+    height: auto;
+    margin: 10px;
+}
+
+.horizontal2 {
+    height: 10px;
+    width: 5%;
+    background-color: #F0F0F0;
+    margin: 0px 15px;
+}
+
+#textoFooter {
+    color: #0085A1;
+    text-align: center;
+    font-size:14px;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 1200px) and (min-width: 901px) {
+    #quienesSomos {
+        height: 900px;
+    }
+    
+    .columna2 {
+        margin-right: 13px;
+    }
+    
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+#quienesSomos {
+        height: 800px;
+    }
+
+    .columna2 {
+        margin-right: 0;
+    }
+
+    #logoMenu {
+        width: 100%;
+        height: 10%;
+        display: block;
+        position: fixed;
+        background: #f96332;
+        z-index: 1;
+        padding: 15px;
+    }
+    
+
+    #logoMenu hr {
+        visibility: hidden;
+    }
+
+    #tituloMenu {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    header nav {
+        padding-top: 100px;
+        display: block;
+        width: 80%;
+        height: 100%;
+        left: -100%;
+        position: fixed;
+        margin: 0;
+        background: #f96332;
+    }
+
+    header ul li {
+        display: block;
+        float: none;
+        border-bottom:1px solid rgba(255,255,255,.5);
+    }
+
+    #imgMenu {
+        display: block;
+        float: right;
+        margin-top: 18px;
+        width: 40px;
+    }
+    #imgMenu:hover {
+        cursor: pointer;
+    }
+
+    #menuHorizontal {
+        width: 100%;
+    }
+
+    #logo {
+        visibility: hidden;
+    }
+
+    #panelAbajo {
+        width: 100%;
+    }
+
+    #informacion {
+        padding: 50px 100px 0px 50px;
+    }
+}
+
+@media screen and (max-width: 599px) and (min-width: 400px) {
+    #quienesSomos {
+        height: 600px;
+    }
+
+    #quienesSomos{
+        font-size: 14px;
+    }
+
+    .columna2 {
+        margin-right: 0;
+        height: 200px;
+    }
+
+    #logoMenu {
+        width: 100%;
+        height: 10%;
+        display: block;
+        position: fixed;
+        background: #f96332;
+        z-index: 1;
+    }
+
+    #logoMenu hr {
+        visibility: hidden;
+    }
+
+    header nav {
+        padding-top: 100px;
+        display: block;
+        width: 80%;
+        height: 100%;
+        left: -100%;
+        position: fixed;
+        margin: 0;
+        background: #f96332;
+    }
+
+    #tituloMenu {
+        visibility: hidden;
+    }
+
+    #imgMenu {
+        display: block;
+        float: right;
+        width: 40px;
+        margin: 0 auto;
+    }
+    #imgMenu:hover {
+        cursor: pointer;
+    }
+
+    #menuHorizontal {
+        background: none;
+        height: 450px;
+    }
+
+    #menuHorizontal ul li{
+        display: inline-block;
+        font-size: 14px;
+        padding:5px;
+    }
+
+    #menuHorizontal ul li:hover {
+        background: #827ffe;
+    }
+
+    #menuHorizontal {
+        width: 100%;
+    }
+
+    #menuHorizontal ul{
+        padding: 0;
+        width: 100%;
+    }
+
+    #menuHorizontal ul li  {
+        color: black;
+        padding: 10px;
+    }
+
+    #panelAbajo {
+        width: 100%;
+    }
+
+    #logo {
+        z-index: -1;
+        top: 100px;
+        width: 300px;
+        left: 65px;
+    }
+
+    #servicios {
+        display: block;
+    }
+
+    .columna {
+        width: 100%;
+    }
+
+    #fortaleza p {
+        visibility: hidden;
+    }
+
+    footer img{
+        width: 50px;
+    }
+
+    footer {
+        height: 100px;
+    }
+
+    #datos input {
+        width: 85%;
+        margin-bottom: 30px;
+    }
+
+    .content {
+        margin-top: 70px;
+        width: 100%;
+    }
+
+    .textFortaleza {
+        display: none;
+        text-align: center;
+    }
+
+    #imagenes {
+        display: none;
+    }
+
+    .columna {
+        width: auto;
+    }
+
+    #informacion{
+        width: 100%;
+    }
+
+    .fortaleza{
+        border-bottom: 2px solid #FFFFFF;
+        width: 100%;
+    }
+
+    #textoEquipo{
+        font-size: 14px;
+    }
+
+    #imgAdrian {
+        margin-top: 18px;
+    }
+}
+
+/*SANDBOX*/
+
+.mediano{
+    width: 150px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.espacio{
+    margin-right: 10px;
 
 }
+
+#linea{
+    background-color: #f96332 ;
+    height: 1px;
+    margin-right: 40px;
+}
+
+.boton{
+    padding: 5px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #f96332;
+    border-radius: 10px;
+}
+/*TRAIN LINE*/
+
+#train-line {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    width: 50vw;
+    height: 50vh;
+    transition: opacity 1s ease-in;
+    transform: translateY(-6vw) translateX(3vw);
+}
+.lines {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: 10px;
+    background-color: var(--main-color);
+    border-radius: 40px;
+}
+#line2 {
+    transform: rotate(40deg) translateY(5.5vw) translateX(1.6vw);
+}
+#line3 {
+    transform: translateY(10.5vw) translateX(-4.6vw);
+}
+.train {
+    width: 25px;
+    height: 25px;
+    transform: translateX(-50%);
+    transition: 8s linear;
+    background-color: var(--main-color);
+    border-radius: 40px;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 10px gray, 0 0 20px gray, 0 0 30px #22efc4, 0 0 40px #22efc4, 0 0 50px #22efc4, 0 0 60px #22efc4, 0 0 70px #22efc4;
+        opacity: 1;
+    }
+    to {
+        box-shadow: 0 0 20px gray, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green, 0 0 80px green;
+        opacity: 0.9;
+    }
+}
+
+
