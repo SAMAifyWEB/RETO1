@@ -5,10 +5,10 @@ window.onload = function() {
     $(".subway-map").subwayMap();
     let span = $(".text");
 
-    span.eq(0).css({"left" : "40", "top" : "80"})
-    span.eq(1).css({"left" : "240", "top" : "160"})
-    span.eq(2).css({"left" : "361", "top" : "41"})
-    span.eq(3).css({"left" : "361", "top" : "243"})
+    span.eq(0).css({"left" : "21", "top" : "203"})
+    span.eq(1).css({"left" : "162", "top" : "160"})
+    span.eq(2).css({"left" : "320", "top" : "200"})
+    span.eq(3).css({"left" : "462", "top" : "158"})
 
     //train1.css({"left" : "100%", "transform" : "translateX(-50%)"});
 
