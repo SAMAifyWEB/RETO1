@@ -1,9 +1,8 @@
-$(document).read(function () {
-    $.ajaxSetup({cache:false});
-    setInterval(function () {
-        $.get("leer_variable.html",function (result) {
-            //etiqueta es el id del
-            $('#etiqueta').text(result.trim());
-        });
-    },1000);
-});
+$(document).ready(function() {
+    setInterval(actualizar,500);
+    let s = parseInt(document.getElementById("bool").innerHTML);
+    document.getElementById("bool").innerHTML = Boolean(s);
+})
+function actualizar(){
+    $("#etiqueta").load("leer_variable.html");
+}

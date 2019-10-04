@@ -1,87 +1,88 @@
+<!-- AWP_In_Variable Name='"mis_datos".contador' -->
+<!-- AWP_In_Variable Name='"mis_datos".aceleracion' -->
+<!-- AWP_In_Variable Name='"mis_datos".posicionActual' -->
+<!-- AWP_In_Variable Name='"mis_datos".iniciado' -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript" src="../js/Navegador.js"></script>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="navegadorReto1.css">
+    <link rel="stylesheet" type="text/css" href="sandbox.css">
+    <script type="text/javascript" src="sandbox.js"></script>
+
 </head>
 <body>
-    <header>
-        <div id="logoMenu">
-            <img id="imgMenu" src="../img/menu.png">
-            <a id="tituloMenu" href="">SAMAify</a>
-            <hr>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">
-                        <p><img src="../img/tranvia.png"> animacion</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="grafica.html">
-                        <p><img src="../img/estadisticas.png">estadisticas</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="sandbox.html">
-                        <p><img src="../img/modificar.png"> sandbox</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="aboutUs.html">
-                        <p><img src="../img/aboutUs.png" class="aboutUs"> About us</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<div id="menu">
+    <div id="logo">
+        <a href="">SAMAify</a>
+        <hr>
+    </div>
+    <ul>
+        <li>
+            <a href="">
+                <p><img src="../imagenes/tranvia.png"> animacion</p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p><img src="../imagenes/estadisticas.png">estadisticas</p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p><img src="../imagenes/modificar.png"> sandbox</p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p><img src="../imagenes/aboutUs.png" class="aboutUs"> About us</p>
+            </a>
+        </li>
+    </ul>
+</div>
 <div class="content">
     <h2>Datos</h2>
-    <form action="ejemplo.php" method="post">
+
+    <form method="post">
+        <input name='"mis_datos".contador' type="text" />
+        <button type="submit">Cambiar</button>
+    </form>
+
+    <form method="post">
         <div id="datos">
 
-            <!--
-            <label class="espacio">Posición actual: </label>
-            De esta forma visualizamos el valor de contador
-            <label class="espacio">Contador= :="mis_datos".contador</label>
-            -->
+            <p>:="mis_datos".posicionActual:</p>
+            <p>:="mis_datos".aceleracion:</p>
+            <p id="bool">:="mis_datos".iniciado:</p>
 
             <label class="espacio">Posición actual: </label>
-            <!--
-            input name = nombre de la variable de tiaPortal
-            ejem: '"mis_datos".contador'
-            -->
-            <input type="text" class="mediano" name="posicionActual" size="40"><br>
+            <input type="number" class="mediano" name='"mis_datos".posicionActual' />
+
 
             <label class="espacio">Aceleración: </label>
-            <input type="text" class="mediano" name="aceleracion"><br>
+            <input type="number" class="mediano" name='"mis_datos".aceleracion'/>
+
+            <label class="espacio">Aceleración: </label>
+            <input type="number" class="mediano" name='"mis_datos".iniciado'/>
 
             <label class="espacio">Número de paradas:</label>
-            <input type="text" class="mediano" name="numparadas"><br>
+            <input type="text" class="mediano" name="numparadas"/><br>
 
             <label class="espacio">Tiempo entre paradas: </label>
-            <input type="text" class="mediano" name="numparadas"><br>
+            <input type="text" class="mediano" name="numparadas"/>
 
             <label class="espacio">Tiempo del recorrido: </label>
-            <input type="text" class="mediano" name="numparadas">
+            <input type="text" class="mediano" name="numparadas"/>
 
         </div>
         <div >
             <p>
-                <button>
-                    Iniciar
-                </button>
-                <button>
-                    Parar
-                </button>
-                <button>
-                    Cambiar Valores
-                </button>
+                <input class="boton" type="button" value="Iniciar">
+                <input class="boton" type="button" value="Parar">
+                <input class="boton" type="submit" value="Cambiar valores">
             </p>
         </div>
     </form>
@@ -96,8 +97,20 @@
     <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
     <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
     <h3>Algo despues de la animacion</h3>
-    
+
 </div>
 
 </body>
 </html>
+<!--<label class="espacio">Posición actual: </label>
+     De esta forma visualizamos el valor de contador
+
+          <label class="espacio">Posición actual: </label>
+          De esta forma visualizamos el valor de contador
+          <label class="espacio">Contador= :="mis_datos".contador</label>
+          -->
+
+<!--
+            input name = nombre de la variable de tiaPortal
+            ejem: '"mis_datos".contador'
+            -->
