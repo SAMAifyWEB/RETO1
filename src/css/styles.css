@@ -14,7 +14,7 @@
 /*ABOUT US*/
 body {
     margin: 0;
-    font-family: Roboto;
+    font-family: Roboto, serif;
     background-color: #F4F4F4;
 }
 
@@ -675,49 +675,283 @@ footer img {
     border-radius: 10px;
 }
 /*TRAIN LINE*/
+/* The main DIV for the map */
+.subway-map
+{
+    margin: 0;
+    width: 500px;
+    height:410px;
+    background-color: white;
+}
 
-#train-line {
-    display: flex;
-    align-items: center;
+/* Text labels */
+.subway-map .text
+{
+    text-decoration: none;
+    color: black;
     opacity: 1;
-    width: 50vw;
-    height: 50vh;
-    transition: opacity 1s ease-in;
-    transform: translateY(-6vw) translateX(3vw);
 }
-.lines {
-    display: flex;
-    align-items: center;
-    width: 450px;
-    height: 10px;
-    background-color: var(--main-color);
-    border-radius: 40px;
+
+#legend span
+{
+    margin: 5px 5px 5px 0;
 }
-#line2 {
-    transform: rotate(40deg) translateY(5.5vw) translateX(1.6vw);
+.subway-map{
+    background:#F4F4F4;
 }
-#line3 {
-    transform: translateY(10.5vw) translateX(-4.6vw);
+.subway-map span
+{
+    margin: 5px 5px 5px 0;
 }
-.train {
-    width: 25px;
-    height: 25px;
-    transform: translateX(-50%);
-    transition: 8s linear;
-    background-color: var(--main-color);
-    border-radius: 40px;
+#subway-container{
+    margin: 0 auto;
+    width: 480px;
+    height: 300px;
+    position: relative;
+    z-index: -100;
+}
+
+#train{
+    width: 15px;
+    height: 15px;
+    background: #CEFAC0;
+    border-radius: 100%;
+    position: absolute;
+    top: 64%;
+    left: 2.5%;
+    z-index: 4000;
+    transition: all 4s ease-in;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 }
+li {
+    top: 80px;
+    left: 40px;
+}
+#realTime-container{
+    margin: 0 auto;
+    width: 680px;
+    font-size: 14px;
+    font-weight: 300;
+}
+#data p{
+    font-weight: 300;
+}
+#data span{
+    font-weight: 400;
+    transition: all 4s ease-in;
+    color: cadetblue;
+}
+#data{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: -100px;
+}
+
+
 @-webkit-keyframes glow {
     from {
-        box-shadow: 0 0 10px gray, 0 0 20px gray, 0 0 30px #22efc4, 0 0 40px #22efc4, 0 0 50px #22efc4, 0 0 60px #22efc4, 0 0 70px #22efc4;
+        box-shadow: 0 0 5px #87e866, 0 0 10px #87E866, 0 0 150px #22efc4, 0 0 20px #22efc4, 0 0 25px #22efc4, 0 0 30px #22efc4, 0 0 35px #22efc4;
         opacity: 1;
     }
     to {
-        box-shadow: 0 0 20px gray, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green, 0 0 80px green;
+        box-shadow: 0 0 10px #87E866, 0 0 15px #36fe75, 0 0 20px #36fe75, 0 0 25px #36fe75, 0 0 30px #36fe75, 0 0 35px #36fe75, 0 0 40px #36fe75;
         opacity: 0.9;
+    }
+}
+#real-time-title-container{
+    padding: 120px;
+}
+.real-time-title {
+    color: rgba(35, 35, 35, 0.76);
+    letter-spacing: 8px;
+    font-weight: 100;
+    font-size: 55px;
+    text-align: center;
+
+    /*Create overlap*/
+    margin: 0;
+    line-height: 0;
+
+    /*Animation*/
+    animation: glitch1 10s infinite;
+}
+
+.real-time-title:nth-child(2) {
+    color: #67f3da;
+    animation: glitch2 10s infinite;
+}
+
+.real-time-title:nth-child(3) {
+    color: #f16f6f;
+    animation: glitch3 10s infinite;
+}
+/*Keyframes*/
+
+@keyframes glitch1 {
+    0% {
+        transform: none;
+        opacity: 1;
+    }
+    7% {
+        transform: skew(-0.5deg, -0.9deg);
+        opacity: 0.75;
+    }
+    10% {
+        transform: none;
+        opacity: 1;
+    }
+    27% {
+        transform: none;
+        opacity: 1;
+    }
+    30% {
+        transform: skew(0.8deg, -0.1deg);
+        opacity: 0.75;
+    }
+    35% {
+        transform: none;
+        opacity: 1;
+    }
+    52% {
+        transform: none;
+        opacity: 1;
+    }
+    55% {
+        transform: skew(-1deg, 0.2deg);
+        opacity: 0.75;
+    }
+    50% {
+        transform: none;
+        opacity: 1;
+    }
+    72% {
+        transform: none;
+        opacity: 1;
+    }
+    75% {
+        transform: skew(0.4deg, 1deg);
+        opacity: 0.75;
+    }
+    80% {
+        transform: none;
+        opacity: 1;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes glitch2 {
+    0% {
+        transform: none;
+        opacity: 0.25;
+    }
+    7% {
+        transform: translate(-2px, -3px);
+        opacity: 0.5;
+    }
+    10% {
+        transform: none;
+        opacity: 0.25;
+    }
+    27% {
+        transform: none;
+        opacity: 0.25;
+    }
+    30% {
+        transform: translate(-5px, -2px);
+        opacity: 0.5;
+    }
+    35% {
+        transform: none;
+        opacity: 0.25;
+    }
+    52% {
+        transform: none;
+        opacity: 0.25;
+    }
+    55% {
+        transform: translate(-5px, -1px);
+        opacity: 0.5;
+    }
+    50% {
+        transform: none;
+        opacity: 0.25;
+    }
+    72% {
+        transform: none;
+        opacity: 0.25;
+    }
+    75% {
+        transform: translate(-2px, -6px);
+        opacity: 0.5;
+    }
+    80% {
+        transform: none;
+        opacity: 0.25;
+    }
+    100% {
+        transform: none;
+        opacity: 0.25;
+    }
+}
+
+@keyframes glitch3 {
+    0% {
+        transform: none;
+        opacity: 0.25;
+    }
+    7% {
+        transform: translate(2px, 3px);
+        opacity: 0.5;
+    }
+    10% {
+        transform: none;
+        opacity: 0.25;
+    }
+    27% {
+        transform: none;
+        opacity: 0.25;
+    }
+    30% {
+        transform: translate(5px, 2px);
+        opacity: 0.5;
+    }
+    35% {
+        transform: none;
+        opacity: 0.25;
+    }
+    52% {
+        transform: none;
+        opacity: 0.25;
+    }
+    55% {
+        transform: translate(5px, 1px);
+        opacity: 0.5;
+    }
+    50% {
+        transform: none;
+        opacity: 0.25;
+    }
+    72% {
+        transform: none;
+        opacity: 0.25;
+    }
+    75% {
+        transform: translate(2px, 6px);
+        opacity: 0.5;
+    }
+    80% {
+        transform: none;
+        opacity: 0.25;
+    }
+    100% {
+        transform: none;
+        opacity: 0.25;
     }
 }
 
