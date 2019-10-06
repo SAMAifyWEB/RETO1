@@ -18,7 +18,6 @@ window.onload = function() {
     title.css("margin-bottom", "0");
 
 
-
     title.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", () => {
         load();
         loaderContainer.css("opacity", "1");
