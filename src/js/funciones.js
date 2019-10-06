@@ -6,3 +6,4 @@ $(document).ready(function() {
 function actualizar(){
     $("#etiqueta").load("leer_variable.html");
 }
+

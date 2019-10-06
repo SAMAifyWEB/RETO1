@@ -49,25 +49,29 @@
 <div class="content">
     <h2>Datos</h2>
 
-    <form method="post">
+    <form method="post" >
         <div id="datos">
 
-            <p>:="mis_datos".contador:</p>
-            <p>:="mis_datos".aceleracion:</p>
+            <p>:="mis_datos".posicion:</p>
+            <p>:="mis_datos".proximaParada:</p>
             <p>:="mis_datos".velocidad:</p>
+            <p>:="mis_datos".aceleracion:</p>
 
             <p id="bool">:="mis_datos".iniciado:</p>
 
-            <label class="espacio">contador: </label>
-            <input type="number" class="mediano" name='"mis_datos".contador'max="50" min="0"/>
+            <label class="espacio">posicion: </label>
+            <input type="number" pattern="[0-50]"  class="mediano" name='"mis_datos".posicion'max="50" min="0"/>
+
+            <label class="espacio">proximaParada: </label>
+            <input type="number" pattern="[0-50]"  class="mediano" name='"mis_datos".posicion' step="10" max="50" min="10"/>
 
             <label class="espacio">aceleración: </label>
             <input type="number" class="mediano" name='"mis_datos".aceleracion' max="4" min="1"/>
 
             <label class="espacio">velocidad: </label>
-            <input type="number" class="mediano" name='"mis_datos".velocidad'/>
+            <input type="number" class="mediano" name='"mis_datos".velocidad' max="5" min="1"/>
 
-            <label class="espacio">Aceleración: </label>
+           <!-- <label class="espacio">Aceleración: </label>
             <input type="number" class="mediano" name='"mis_datos".iniciado'/>
 
             <label class="espacio">Número de paradas:</label>
@@ -77,18 +81,18 @@
             <input type="text" class="mediano" name="numparadas"/>
 
             <label class="espacio">Tiempo del recorrido: </label>
-            <input type="text" class="mediano" name="numparadas"/>
+            <input type="text" class="mediano" name="numparadas"/>-->
 
         </div>
         <div >
             <p>
-                <button>
+                <button type="submit">
                     Iniciar
                 </button>
-                <button>
-                    Parar
+                <button type="submit">
+                    Reiniciar
                 </button>
-                <button>
+                <button type="submit">
                     Cambiar Valores
                 </button>
             </p>
@@ -102,9 +106,7 @@
     </div>
 
     <h2>Animacion</h2>
-    <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
-    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-    <h3>Algo despues de la animacion</h3>
+
 
 </div>
 
