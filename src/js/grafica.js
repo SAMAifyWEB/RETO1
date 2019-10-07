@@ -100,6 +100,14 @@ let chart = new Chart(miCanvas, {
 
 })
 
+//GRAFICA ALMACENADA
+
+
+
+
+//GRAFICA ERRORES
+
+
 
 /*setInterval(() => {
 	console.log(contador)
