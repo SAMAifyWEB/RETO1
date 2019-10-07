@@ -62,18 +62,17 @@ $(document).ready(function () {
 function actualizar() {
     $("#contador").load("leer_variable.html #contador1");
     $("#velocidad").load("leer_variable.html #velocidad2");
-    $("#aceleracion").load("leer_variable.html #aceleracion3");
 
     contador = parseInt(document.getElementById("contador1").innerHTML)
     velocidad = parseInt(document.getElementById("velocidad2").innerHTML)
-    aceleracion = parseInt(document.getElementById("aceleracion3").innerHTML)
     console.log("contador: " + contador)
     chart.data.datasets[0].data.push(contador)
+    chart.data.datasets[1].data.push(velocidad)
 
 
     hoy = new Date();
 
-    hoyString = hoy.toISOString().substr(11,8);
+    hoyString = hoy.toISOString().substr(11, 8);
 
     chart.data.labels.push(hoyString)
     chart.update();
@@ -89,12 +88,20 @@ let chart = new Chart(miCanvas, {
         labels: [],
         datasets: [
             {
-                label: "Grafica del tranvia",
+                label: "Velocidad del tranvia",
                 backgroundColor: "rgb(255,0,0,0)",
                 borderColor: "rgb(0,250,0)",
                 borderWidth: 2.5,
                 data: []
+            },
+            {
+                label: "Posicion del tranvia",
+                backgroundColor: "rgb(255,0,0,0)",
+                borderColor: "rgb(27,167,250)",
+                borderWidth: 2.5,
+                data: []
             }
+
         ]
     }
 
@@ -106,6 +113,47 @@ let chart = new Chart(miCanvas, {
 
 
 //GRAFICA ERRORES
+let error
+
+$(document).ready(function () {
+    setInterval(actualizarError, 2000);
+})
+
+function actualizarError() {
+    $("#error").load("leer_variable.html #error3");
+
+    error = parseInt(document.getElementById("error3").innerHTML)
+    chartError.data.datasets[0].data.push(error)
+    console.log(error)
+
+    hoy = new Date();
+
+    hoyString = hoy.toISOString().substr(11, 8);
+
+    chartError.data.labels.push(hoyString)
+    chartError.update();
+
+}
+
+
+let miCanvasError = document.getElementById("miGrafica3").getContext("2d")
+
+let chartError = new Chart(miCanvasError, {
+    type: "bar",
+    data: {
+        labels: [],
+        datasets: [
+            {
+                label: "Errores del tranvia",
+                backgroundColor: "rgb(128,64,0)",
+                borderColor: "rgb(0,0,0)",
+                borderWidth: 2.5,
+                data: []
+            }
+        ]
+    }
+
+})
 
 
 
@@ -114,7 +162,3 @@ let chart = new Chart(miCanvas, {
 	chart.data.datasets[0].data[0] = contador
 	console.log(chart.data.datasets[0].data[0])},1201)
 alert(contador, velocidad, aceleracion)*/
-
-
-
-
