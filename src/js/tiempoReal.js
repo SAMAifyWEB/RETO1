@@ -1,3 +1,6 @@
+/**
+ * Colocar el tren en la posicion en la que nos indique el automata
+ */
 window.onload = function() {
     let train = $("#train");
     $(".subway-map").subwayMap();

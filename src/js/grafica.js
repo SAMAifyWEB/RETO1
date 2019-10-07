@@ -1,9 +1,15 @@
-//documento usado unicmanete para la creacion de graficas
+/**
+ * documento usado unicmanete para la creacion de graficas
+ */
+
 
 //PESTAÑAS
 
-// Dadas la division que contiene todas las pestañas y la de la pestaña que se
-// quiere mostrar, la funcion oculta todas las pestañas a excepcion de esa.
+/**
+ * Dadas la division que contiene todas las pestañas y la de la pestaña que se
+ * quiere mostrar, la funcion oculta todas las pestañas a excepcion de esa.
+ */
+
 function cambiarPestanna(pestannas,pestanna) {
 
     // Obtiene los elementos con los identificadores pasados.
@@ -39,26 +45,29 @@ function cambiarPestanna(pestannas,pestanna) {
 }
 
 //GRAFICA VELOCIDAD
-
 let contador
 let velocidad
 let aceleracion
+let contador2
+let mediaContador = 0;
+let contadorActualizaciones = 0;
 let hoy = new Date();
 
 let hoyString = hoy.toISOString().substr(11,8);
-
-
 
 console.log(hoyString)
 
 console.log(typeof hoyString)
 
-
-
 $(document).ready(function () {
     setInterval(actualizar, 6000);
 })
 
+
+
+/**
+ * Actualiza cada cierto tiempo los datos que coge del automata
+ */
 function actualizar() {
     $("#contador").load("leer_variable.html #contador1");
     $("#velocidad").load("leer_variable.html #velocidad2");
@@ -66,19 +75,17 @@ function actualizar() {
     contador = parseInt(document.getElementById("contador1").innerHTML)
     velocidad = parseInt(document.getElementById("velocidad2").innerHTML)
     console.log("contador: " + contador)
+
     chart.data.datasets[0].data.push(contador)
     chart.data.datasets[1].data.push(velocidad)
-
 
     hoy = new Date();
 
     hoyString = hoy.toISOString().substr(11, 8);
 
-    chart.data.labels.push(hoyString)
+    chart.data.labels.push(hoyString);
     chart.update();
-
 }
-
 
 let miCanvas = document.getElementById("miGrafica").getContext("2d")
 
@@ -109,6 +116,61 @@ let chart = new Chart(miCanvas, {
 
 //GRAFICA ALMACENADA
 
+$(document).ready(function () {
+    setInterval(actualizar2, 6000);
+    setInterval(sacarMedias, 18000);
+})
+
+function actualizar2() {
+    $("#contador").load("leer_variable.html #contador1");
+
+    contador2 = parseInt(document.getElementById("contador1").innerHTML)
+    console.log("contador: " + contador)
+
+    mediaContador += contador2;
+    console.log(mediaContador);
+
+    contadorActualizaciones ++;
+    console.log(contadorActualizaciones);
+
+
+}
+
+function sacarMedias() {
+    let media;
+    media = mediaContador / contadorActualizaciones;
+    console.log(mediaContador);
+
+    localStorage.setItem("contador", media);
+
+    chart2.data.datasets[0].data.push(localStorage.getItem("contador"));
+
+    hoy = new Date();
+
+    hoyString = hoy.toISOString().substr(11,8);
+
+    chart2.data.labels.push(hoyString)
+    chart2.update();
+}
+
+let miCanvas2 = document.getElementById("miGrafica2").getContext("2d");
+
+let chart2 = new Chart(miCanvas2, {
+    type: "line",
+    data: {
+        labels: [],
+        datasets: [
+            {
+                label: "Grafica almacenada",
+                backgroundColor: "rgb(255,0,0,0)",
+                borderColor: "rgb(0,250,0)",
+                borderWidth: 2.5,
+                data: []
+            }
+        ]
+    }
+
+})
 
 
 
