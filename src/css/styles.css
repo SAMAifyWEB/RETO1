@@ -11,38 +11,93 @@
     padding: 50px;
 }
 
+#pestanas {
+    float: top;
+    font-size: 3ex;
+    font-weight: bold;
+}
+
+#pestanas ul{
+    margin-left: -40px;
+}
+
+#pestanas li{
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    margin: 0px 2px -2px -0px;
+    background:  #f96332;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid bisque;
+    border-bottom:  #F4F4F4;
+    padding: 0px 20px 0px 20px;
+}
+
+#pestanas a:link{
+    text-decoration: none;
+    color: bisque;
+}
+
+#contenidopestanas{
+    clear: both;
+    padding: 20px 0px 20px 20px;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border: 2px solid bisque;
+    width: 60%;
+    height: 60%;
+}
+
 /*ABOUT US*/
 body {
     margin: 0;
-    font-family: Roboto;
+    font-family: Roboto, serif;
     background-color: #F4F4F4;
 }
 
-#menu {
+header nav{
     width: 15%;
     position: fixed;
-    height: 100%;
     background-color: #f96332;
+    height: 100%;
+}
+
+#logoMenu a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+header {
+    width: 15%;
+    background-color: #f96332;
+    position: fixed;
 }
 
 #logoMenu {
-    padding: 0.5rem 0.7rem;
+    padding: 2rem 1rem 0.7rem 0.7rem;
     font-size: 1.5em;
+    height: 100%;
     text-align: center;
+    
+} 
+
+#imgMenu {
+    display: none;
 }
 
-#menu ul {
+header nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-#menu p {
+header p {
     margin: 0;
     line-height: 30px;
     padding-left: 10px;
 }
 
-#menu a {
+header nav ul a {
     margin: 10px 15px 0;
     border-radius: 30px;
     color: #FFFFFF;
@@ -53,33 +108,33 @@ body {
     transition: all 1000ms ease 0s;
 }
 
-#menu hr {
+header hr {
     height: 0.1px;
     width: 85%;
     background-color: #FFFFFF;
 }
 
-#menu ul a:hover {
+header nav ul a:hover {
     background-color: rgba(255,255,255,0.2);
     transition: all 200ms ease 0s;
 }
 
-#menu ul img {
+header nav ul img {
     width: 25px;
     height: auto;
     margin-right: 20px;
 }
 
-#menu ul a:active {
+header nav ul a:active {
     background-color: #FFFFFF;
     color: #f96332;
 }
 
 #logo {
     position: absolute;
-    top: 50px;
-    right: 150px;
-    width: 500px;
+    top: 150px;
+    width: 25%;
+    right: 100px;
 }
 
 #menuHorizontal {
@@ -131,7 +186,7 @@ h1 {
 }
 
 .persona:hover + .text{
-    opacity: 1;
+    display: block;
 }
 
 
@@ -171,6 +226,10 @@ h4 {
     margin:10px;
 }
 
+.columna ul {
+    width: 100%;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -207,7 +266,7 @@ h4 {
 
 #Fortalezas {
     width: 100%;
-    height: 600px;
+    height: auto;
     display: flex;
     margin: 75px 0px 150px 0px;
 }
@@ -217,7 +276,6 @@ h4 {
 }
 
 #panelAbajo ul li {
-    list-style-type: none;
     padding: 15px;
 }
 
@@ -225,7 +283,7 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     width: 60%;
-    height: 1400px;
+    height: 1500px;
     margin: 0 auto;
     background-color: white;
     padding: 10px 0px 10px 30px;
@@ -241,44 +299,33 @@ h4 {
     height: 300px;
 }
 
-
-.mas {
-    width: 100px;
-    position: relative;
-    bottom: 200px;
-    left: 140px;
-    visibility: hidden;
-}
-
 .columna2 p {
     padding-left: 15px;
+}
+
+.columna li {
+    list-style-type: square;
 }
 
 #quienesSomos .persona {
     width: 100%;
     height: auto;
-    transition: transform ease 500ms;
 }
 
 .text{
     position: relative;
-    opacity: 0;
-    bottom: 150px;
+    display: none;
+    bottom: 400px;
     color: black;
-    display:block;
     width:100%;
-    text-align:center;
-    transform(0px,0px,1);
-    transition: transform;
+    transition: border-radius 1000ms ease;
+    font-size: 20px;
+    color: #0085A1;
 }
 
 .persona:hover{
-    transform:scale(0.25);
-    border-radius: 75%;
-}
-
-.persona:hover #quienesSomos{
-    background-color: black;
+    opacity: 0;
+    transition: opacity 500ms;
 }
 
 #headerEquipo {
@@ -319,7 +366,6 @@ form {
 
 button {
     background-color: #827ffe;
-    width: 11%;
 }
 
 button:hover {
@@ -381,37 +427,570 @@ footer img {
     font-size:14px;
     margin-bottom: 30px;
 }
+@media screen and (max-width: 1200px) and (min-width: 951px) {
+    #quienesSomos {
+        height: 900px;
+    }
+
+    
+    .columna2 {
+        margin-right: 13px;
+    }
+    
+}
+
+@media screen and (max-width: 950px) and (min-width: 600px) {
+    #quienesSomos {
+        height: 900px;
+    }
+
+    .text {
+        bottom: 230px;
+        font-size: 16px;
+    }
+
+    .columna2 {
+        margin-right: 10px;
+    }
+
+    #logoMenu {
+        width: 100%;
+        height: 10%;
+        display: block;
+        position: fixed;
+        background: #f96332;
+        z-index: 1;
+        padding: 15px;
+    }
+    
+
+    #logoMenu hr {
+        visibility: hidden;
+    }
+
+    #tituloMenu {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    header nav {
+        padding-top: 100px;
+        display: block;
+        width: 80%;
+        height: 100%;
+        left: -100%;
+        position: fixed;
+        margin: 0;
+        background: #f96332;
+        transition: ease-in 1s;
+    }
+
+    header ul li {
+        display: block;
+        float: none;
+        border-bottom:1px solid rgba(255,255,255,.5);
+    }
+
+    #imgMenu {
+        display: block;
+        float: right;
+        margin-top: 18px;
+        width: 40px;
+    }
+    #imgMenu:hover {
+        cursor: pointer;
+    }
+
+    #menuHorizontal {
+        width: 100%;
+    }
+
+    #logo {
+        visibility: hidden;
+    }
+
+    #panelAbajo {
+        width: 100%;
+    }
+
+    #informacion {
+        padding: 50px 100px 0px 50px;
+    }
+    .content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 599px) and (min-width: 400px) {
+    #quienesSomos {
+        height: 600px;
+    }
+
+    #quienesSomos{
+        font-size: 14px;
+    }
+
+    .text {
+        bottom: 155px;
+        font-size: 12px;
+    }
+
+    .columna2 {
+        margin-right: 0;
+        height: 200px;
+    }
+
+    #logoMenu {
+        width: 100%;
+        height: 10%;
+        display: block;
+        position: fixed;
+        background: #f96332;
+        z-index: 1;
+    }
+
+    #logoMenu hr {
+        visibility: hidden;
+    }
+
+    header nav {
+        padding-top: 100px;
+        display: block;
+        width: 80%;
+        height: 100%;
+        left: -100%;
+        position: fixed;
+        margin: 0;
+        background: #f96332;
+        transition: ease-in 1s ;
+    }
+
+    #tituloMenu {
+        visibility: hidden;
+    }
+
+    #imgMenu {
+        display: block;
+        float: right;
+        width: 40px;
+        margin: 0 auto;
+    }
+    #imgMenu:hover {
+        cursor: pointer;
+    }
+
+    #menuHorizontal {
+        background: none;
+        height: 450px;
+    }
+
+    #menuHorizontal ul li{
+        display: inline-block;
+        font-size: 14px;
+        padding:5px;
+    }
+
+    #menuHorizontal ul li:hover {
+        background: #827ffe;
+    }
+
+    #menuHorizontal {
+        width: 100%;
+    }
+
+    #menuHorizontal ul{
+        padding: 0;
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    #menuHorizontal ul li  {
+        color: black;
+        padding: 10px;
+    }
+
+    #panelAbajo {
+        width: 100%;
+    }
+
+    #logo {
+        z-index: -1;
+        top: 100px;
+        width: 300px;
+        left: 60px;
+    }
+
+    #servicios {
+        display: block;
+    }
+
+    .columna {
+        width: 100%;
+    }
+
+    #fortaleza p {
+        visibility: hidden;
+    }
+
+    footer img{
+        width: 50px;
+    }
+
+    footer {
+        height: 100px;
+    }
+
+    #datos input {
+        width: 85%;
+        margin-bottom: 30px;
+    }
+
+    .content {
+        margin-top: 70px;
+        width: 100%;
+    }
+
+    .textFortaleza {
+        display: none;
+        text-align: center;
+    }
+
+    #imagenes {
+        display: none;
+    }
+
+    .columna {
+        width: auto;
+    }
+
+    #informacion{
+        width: 100%;
+    }
+
+    .fortaleza{
+        border-bottom: 2px solid #FFFFFF;
+        width: 100%;
+    }
+
+    #textoEquipo{
+        font-size: 14px;
+    }
+
+    #imgAdrian {
+        margin-top: 18px;
+    }
+}
 
 /*SANDBOX*/
+
 .mediano{
     width: 150px;
     margin-right: 10px;
     margin-bottom: 15px;
 }
+
 .espacio{
     margin-right: 10px;
 
 }
-#datos{
 
-}
-
-#botones{
-
-}
 #linea{
     background-color: #f96332 ;
     height: 1px;
     margin-right: 40px;
 }
-.boton{
 
+.boton{
     padding: 5px;
     font-size: 15px;
     color: #ffffff;
     background-color: #f96332;
     border-radius: 10px;
-    border: 1px solid #f96332;
+}
+/*TRAIN LINE*/
+/* The main DIV for the map */
+.subway-map
+{
+    margin: 0;
+    width: 500px;
+    height:410px;
+    background-color: white;
+}
+
+/* Text labels */
+.subway-map .text
+{
+    text-decoration: none;
+    color: black;
+    opacity: 1;
+}
+
+#legend span
+{
+    margin: 5px 5px 5px 0;
+}
+.subway-map{
+    background:#F4F4F4;
+}
+.subway-map span
+{
+    margin: 5px 5px 5px 0;
+}
+#subway-container{
+    margin: 0 auto;
+    width: 480px;
+    height: 300px;
+    position: relative;
+    z-index: -100;
+}
+
+#train{
+    width: 15px;
+    height: 15px;
+    background: #CEFAC0;
+    border-radius: 100%;
+    position: absolute;
+    top: 64%;
+    left: 2.5%;
+    z-index: 4000;
+    transition: all 4s ease-in;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+li {
+    top: 80px;
+    left: 40px;
+}
+#realTime-container{
+    margin: 0 auto;
+    width: 680px;
+    font-size: 14px;
+    font-weight: 300;
+}
+#data p{
+    font-weight: 300;
+}
+#data span{
+    font-weight: 400;
+    transition: all 4s ease-in;
+    color: cadetblue;
+}
+#data{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: -100px;
+}
+
+
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 5px #87e866, 0 0 10px #87E866, 0 0 150px #22efc4, 0 0 20px #22efc4, 0 0 25px #22efc4, 0 0 30px #22efc4, 0 0 35px #22efc4;
+        opacity: 1;
+    }
+    to {
+        box-shadow: 0 0 10px #87E866, 0 0 15px #36fe75, 0 0 20px #36fe75, 0 0 25px #36fe75, 0 0 30px #36fe75, 0 0 35px #36fe75, 0 0 40px #36fe75;
+        opacity: 0.9;
+    }
+}
+#real-time-title-container{
+    padding: 120px;
+}
+.real-time-title {
+    color: rgba(35, 35, 35, 0.76);
+    letter-spacing: 8px;
+    font-weight: 100;
+    font-size: 55px;
+    text-align: center;
+
+    /*Create overlap*/
+    margin: 0;
+    line-height: 0;
+
+    /*Animation*/
+    animation: glitch1 10s infinite;
+}
+
+.real-time-title:nth-child(2) {
+    color: #67f3da;
+    animation: glitch2 10s infinite;
+}
+
+.real-time-title:nth-child(3) {
+    color: #f16f6f;
+    animation: glitch3 10s infinite;
+}
+/*Keyframes*/
+
+@keyframes glitch1 {
+    0% {
+        transform: none;
+        opacity: 1;
+    }
+    7% {
+        transform: skew(-0.5deg, -0.9deg);
+        opacity: 0.75;
+    }
+    10% {
+        transform: none;
+        opacity: 1;
+    }
+    27% {
+        transform: none;
+        opacity: 1;
+    }
+    30% {
+        transform: skew(0.8deg, -0.1deg);
+        opacity: 0.75;
+    }
+    35% {
+        transform: none;
+        opacity: 1;
+    }
+    52% {
+        transform: none;
+        opacity: 1;
+    }
+    55% {
+        transform: skew(-1deg, 0.2deg);
+        opacity: 0.75;
+    }
+    50% {
+        transform: none;
+        opacity: 1;
+    }
+    72% {
+        transform: none;
+        opacity: 1;
+    }
+    75% {
+        transform: skew(0.4deg, 1deg);
+        opacity: 0.75;
+    }
+    80% {
+        transform: none;
+        opacity: 1;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes glitch2 {
+    0% {
+        transform: none;
+        opacity: 0.25;
+    }
+    7% {
+        transform: translate(-2px, -3px);
+        opacity: 0.5;
+    }
+    10% {
+        transform: none;
+        opacity: 0.25;
+    }
+    27% {
+        transform: none;
+        opacity: 0.25;
+    }
+    30% {
+        transform: translate(-5px, -2px);
+        opacity: 0.5;
+    }
+    35% {
+        transform: none;
+        opacity: 0.25;
+    }
+    52% {
+        transform: none;
+        opacity: 0.25;
+    }
+    55% {
+        transform: translate(-5px, -1px);
+        opacity: 0.5;
+    }
+    50% {
+        transform: none;
+        opacity: 0.25;
+    }
+    72% {
+        transform: none;
+        opacity: 0.25;
+    }
+    75% {
+        transform: translate(-2px, -6px);
+        opacity: 0.5;
+    }
+    80% {
+        transform: none;
+        opacity: 0.25;
+    }
+    100% {
+        transform: none;
+        opacity: 0.25;
+    }
+}
+
+@keyframes glitch3 {
+    0% {
+        transform: none;
+        opacity: 0.25;
+    }
+    7% {
+        transform: translate(2px, 3px);
+        opacity: 0.5;
+    }
+    10% {
+        transform: none;
+        opacity: 0.25;
+    }
+    27% {
+        transform: none;
+        opacity: 0.25;
+    }
+    30% {
+        transform: translate(5px, 2px);
+        opacity: 0.5;
+    }
+    35% {
+        transform: none;
+        opacity: 0.25;
+    }
+    52% {
+        transform: none;
+        opacity: 0.25;
+    }
+    55% {
+        transform: translate(5px, 1px);
+        opacity: 0.5;
+    }
+    50% {
+        transform: none;
+        opacity: 0.25;
+    }
+    72% {
+        transform: none;
+        opacity: 0.25;
+    }
+    75% {
+        transform: translate(2px, 6px);
+        opacity: 0.5;
+    }
+    80% {
+        transform: none;
+        opacity: 0.25;
+    }
+    100% {
+        transform: none;
+        opacity: 0.25;
+    }
 }
 
 
