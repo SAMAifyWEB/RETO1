@@ -1,3 +1,6 @@
+<!-- AWP_In_Variable Name='"mis_datos".contador' -->
+<!-- AWP_In_Variable Name='"mis_datos".Aceleracion' -->
+<!-- AWP_In_Variable Name='"mis_datos".Velocidad' -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,9 +53,39 @@
         <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the
             navigation links.</p>
         <h3>Resize the browser window to see the effect.</h3>
-        <canvas id="miGrafica" width="400" height="300" id="miGrafica"></canvas>
     </div>
 
+    
+<div class="content">
+    <h2>Responsive Sidebar Example</h2>
+    <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or
+        less.</p>
+    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the
+        navigation links.</p>
+    <h3>Resize the browser window to see the effect.</h3>
+    <div id="pestanas">
+        <ul id=lista>
+            <li id="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'>Velocidad</a></li>
+            <li id="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);'>Almacenadas</a></li>
+            <li id="pestana3"><a href='javascript:cambiarPestanna(pestanas,pestana3);'>Errores</a></li>
+        </ul>
+    </div>
+    <div id="contenidopestanas">
+        <div id="cpestana1">
+            <canvas id="miGrafica" width="400" height="300" id="miGrafica"></canvas>
+        </div>
+        <div id="cpestana2">
+            <canvas id="miGrafica2" width="400" height="300" id="miGrafica2"></canvas>
+        </div>
+        <div id="cpestana3">
+            <canvas id="miGrafica3" width="400" height="300" id="miGrafica3"></canvas>
+        </div>
+    </div>
+
+    <p id="contador"></p>
+    <p id="velocidad"></p>
+    <p id="aceleracion"></p>
+</div>
 
     <script type="text/javascript" src="../js/grafica.js"></script>
 </body>
