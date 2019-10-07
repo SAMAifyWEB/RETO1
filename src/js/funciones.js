@@ -1,3 +1,6 @@
+/**
+ *
+ */
 $(document).read(function () {
     $.ajaxSetup({cache:false});
     setInterval(function () {
