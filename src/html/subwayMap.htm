@@ -1,0 +1,69 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>En Directo</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery.subwayMap-0.5.2.js"></script>
+    <script type="text/javascript" src="../js/tiempoReal.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div id="realTime-container">
+    <div id="real-time-title-container">
+        <div class="real-time-title">En directo</div>
+        <div class="real-time-title">En directo</div>
+        <div class="real-time-title">En directo</div>
+    </div>
+    <div id="data">
+        <div>
+            <p>Posición</p>
+            <span id="current-position"></span>
+        </div>
+        <div>
+            <p>Próxima parada</p>
+            <span id="target-position">Sancho el Sabio</span>
+        </div>
+        <div>
+            <p>Velocidad</p>
+            <span id="speed">10m/s</span>
+        </div>
+        <div>
+            <p>Aceleración</p>
+            <span id="acceleration">10cm/s</span>
+        </div>
+    </div>
+    <div id="subway-container">
+        <div id="train"></div>
+        <div class="subway-map" data-columns="12" data-rows="10" data-cellSize="40" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="false" data-lineWidth="8">
+            <ul data-color="#CEFAC0" data-label="Vitoria-Gasteiz">
+                <li data-coords="0.5,5" data-marker="interchange">Angulema</li>
+                <li data-coords="4,5">Parlamento</li>
+                <li data-coords="8,5">Lovaina</li>
+                <li data-coords="11.5,5" data-marker="interchange">Sancho el Sabio</li>
+
+                <!--RECORRIDO CON CURVAS-->
+
+                <!--<li data-coords="1,2" data-marker="interchange">Angulema</li>
+                <li data-coords="4,2"></li>
+                <li data-coords="5,3" data-dir="E"></li>
+                <li data-coords="5,7" data-marker="@station" data-labelPos="W"></li> &lt;!&ndash; marker-only node &ndash;&gt;
+                <li data-coords="6,4" data-dir="S" data-markerInfo="h5">Parlamento</li>
+                <li data-coords="7,4"></li>
+                <li data-coords="7.15,8" data-marker="@station" data-labelPos="E"></li>  &lt;!&ndash; marker-only node, moved to the right by 0.15 &ndash;&gt;
+                <li data-coords="8,3" data-dir="E"></li>
+                <li data-coords="8,2"></li>
+                <li data-coords="9,1" data-dir="N">Lovaina</li>
+                <li data-coords="10,2" data-dir="E" data-labelPos="E"></li>
+                <li data-coords="10,5"></li>
+                <li data-coords="9,6" data-dir="S" data-marker="interchange">Sancho el Sabio</li>-->
+            </ul>
+        </div>
+        <div id="legend"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".subway-map").subwayMap({ debug: true });
+</script>
+</body>
+</html>
