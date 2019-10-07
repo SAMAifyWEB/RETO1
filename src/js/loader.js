@@ -51,7 +51,9 @@ window.onload = function() {
     });
 
 
-    //EVENTOS CLICK EN FEATURES
+    /**
+     * EVENTOS CLICK EN FEATURES
+     */
     let hiddenFeatures = false;
     features.off('click').on('click', function() {
         let currentElementId = $(this).prop("id");
@@ -84,13 +86,18 @@ window.onload = function() {
         }
     });
 
-    //EVENTOS DOBLE CLICK EN FEATURES
+    /**
+     * EVENTOS DOBLE CLICK EN FEATURES
+     */
     features.off('dblclick').on('dblclick', function() {
         asingarUrl($(this).prop("id"));
         window.open(url, '_self');
     });
 
-    //EVENTOS CLICK EN LINK A PAGINAS PROYECTO
+    /**
+     * EVENTOS CLICK EN LINK A PAGINAS PROYECTO
+     */
+
     linkContainerParent.off('click').on('click', function() {
         transitionInfoContent(linkContainerParent, textContainerParent);
         let currentElementId = $(this).parent().siblings(".features").prop("id");
@@ -113,7 +120,7 @@ window.onload = function() {
     }
 
     /**
-     * Mostrar el cuadri de caracteristicas
+     * Mostrar el cuadro de caracteristicas
      * @param currentElement
      */
     function showFeatureBoxes(currentElement){
@@ -148,7 +155,11 @@ window.onload = function() {
         }, delay);
     }
 
-
+    /**
+     * Borrar las funciones al hacer hover
+     * @param currentElement
+     * @param delay
+     */
     function removeFeaturesHoverClass(currentElement, delay){
         setTimeout(function(){
             currentElement.removeClass("features-click-class");
@@ -156,6 +167,9 @@ window.onload = function() {
         }, delay); //.8s is the transition time of the info dropdown
     }
 
+    /**
+     * Cargar la pagina principal
+     */
     function load() {
         innerLoader.width("100%");
         let width = 0;
@@ -226,7 +240,7 @@ window.onload = function() {
     }
 
     /**
-     * Transicion pra el contenido de informacion
+     * Transicion para el contenido de informacion
      * @param currentElementLink
      * @param currentElementText
      */
