@@ -1,5 +1,5 @@
 /**
- * documento usado unicmanete para la creacion de graficas
+ * Documento usado unicmanete para la creacion de graficas
  */
 
 
@@ -9,7 +9,6 @@
  * Dadas la division que contiene todas las pestañas y la de la pestaña que se
  * quiere mostrar, la funcion oculta todas las pestañas a excepcion de esa.
  */
-
 function cambiarPestanna(pestannas,pestanna) {
 
     // Obtiene los elementos con los identificadores pasados.
@@ -43,6 +42,24 @@ function cambiarPestanna(pestannas,pestanna) {
     });
 
 }
+
+
+
+function ocultarGraficas () {
+    document.getElementById("pestana1").style.background = ' #000000';
+    document.getElementById("miGrafica2").style.display = 'none';
+    document.getElementById("miGrafica3").style.display = 'none';
+}
+
+function mostrarGrafica1() {
+    document.getElementById("miGrafica").style.display = 'block';
+}
+
+function mostrarGraficas () {
+    document.getElementById("miGrafica2").style.display = 'block';
+    document.getElementById("miGrafica3").style.display = 'block';
+}
+
 
 //GRAFICA VELOCIDAD
 let contador
@@ -121,6 +138,9 @@ $(document).ready(function () {
     setInterval(sacarMedias, 18000);
 })
 
+/**
+ * Funcion para actualizar los datos del automata cada 18 segundos y sacar la media
+ */
 function actualizar2() {
     $("#contador").load("leer_variable.html #contador1");
 
