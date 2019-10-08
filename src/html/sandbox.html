@@ -74,32 +74,24 @@ Variables del automata
     <form method="post" target="foo">
         <div id="formularioSandbox">
 
-         <!--   <p>:="mis_datos".posicion:</p>
-            <p>:="mis_datos".proximaParada:</p>
-            <p>:="mis_datos".velocidad:</p>
-            <p>:="mis_datos".aceleracion:</p>
-
-            <p id="bool">:="mis_datos".iniciado:</p>-->
+         <!--<p id="bool">:="mis_datos".iniciado:</p>-->
 
             <div>
                 <p>Próxima parada</p>
-                <input type="number" class="mediano" name='"mis_datos".Target position'max="4" min="1"/>
+                <input type="number" class="mediano" name='"mis_datos".Target position'max="4" min="1" value="1"/>
             </div>
             <div>
                 <p>Velocidad</p>
-                <input type="number" class="mediano" name='"mis_datos".Acceleration' max="100" min="1"/>
+                <input type="number" class="mediano" name='"mis_datos".Acceleration' max="100" min="1" value="1"/>
             </div>
             <div>
                 <p>Aceleración</p>
-                <input type="number" class="mediano" name='"mis_datos".Current speed' max="100" min="1"/>
+                <input type="number" class="mediano" name='"mis_datos".Current speed' max="100" min="1" value="1"/>
             </div>
         </div>
         <div class="botonesSandbox">
             <p>
-                <button type="submit">
-                    Iniciar
-                </button>
-                <button type="submit">
+                <button type="reset">
                     Reiniciar
                 </button>
                 <button type="submit">
