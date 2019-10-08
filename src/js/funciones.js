@@ -1,5 +1,5 @@
 /**
- *
+ * Funcion para conectarnos con el servidor y poder intercambiar informacion
  */
 $(document).read(function () {
     $.ajaxSetup({cache:false});
