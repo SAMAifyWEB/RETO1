@@ -44,6 +44,7 @@ function cambiarPestanna(pestannas,pestanna) {
 }
 
 
+
 /**
  * Funcion para seleccionar por defecto la pestaña velocidad
  */
@@ -52,6 +53,7 @@ function ocultarGraficas () {
     document.getElementById("miGrafica2").style.display = 'none';
     document.getElementById("miGrafica3").style.display = 'none';
 }
+
 
 /**
  * Funcion para las pestañas de almacenadas y errores
@@ -65,11 +67,11 @@ function mostrarGraficas () {
 //GRAFICA VELOCIDAD
 let contador
 let velocidad
-let aceleracion
 let contador2
 let mediaContador = 0;
 let contadorActualizaciones = 0;
 let hoy = new Date();
+let error
 
 let hoyString = hoy.toISOString().substr(11,8);
 
@@ -202,7 +204,6 @@ let chart2 = new Chart(miCanvas2, {
 
 
 //GRAFICA ERRORES
-let error
 
 /**
  * Funcion para comprobar si hay algun error
