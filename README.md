@@ -45,10 +45,17 @@ Puedes descargar la aplicación desde GitHub o clonarla a través de <a href="ht
 # Clona el repositorio
 $ git clone https://github.com/SAMAifyWEB/RETO1.git
 ```
+## Documentación
 Para utilizar la aplicación es necesario instalar los paquetes Tia Portal y PLC Sim del software <a href="https://support.industry.siemens.com/cs/document/109752566/simatic-step-7-and-wincc-v15-trial-download-?dti=0&lc=en-WW">Simatic Step 7</a> de Siemens. 
 Ejecuta el proyecto a través del Tia Portal.
-
-## Documentación
 ## Desarrolladores y Soporte
-chartjs, subway map + samaify + ari
+Este proyecto ha sido creado por los desarrolladores de SAMAify 
+ - <a href="https://github.com/AdrianDanlos">Adrián Danlos</a>
+ - <a href="https://github.com/SergioZulueta">Miguel Barros</a>
+ - <a href="https://github.com/AritzMartinez">Sergio Zulueta</a>
+ - <a href="https://github.com/miguelbarrosv">Aritz Martínez</a>
+
+Librerías utilizadas:
+ - <a href="https://www.chartjs.org/">Chart.js</a>
+ - <a href="https://kalyani.com/blog/2010/10/08/subway-map-visualization-jquery-plugin/">Subway Map Visualization </a>
 
