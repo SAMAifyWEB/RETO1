@@ -13,7 +13,7 @@
     <script type="text/javascript" src="../js/NavegadorTransicion.js"></script>
     <title>Grafica</title>
 </head>
-<body>
+<body onload="ocultarGraficas()">
 
     <header>
         <div id="logoMenu">
@@ -66,13 +66,13 @@
     <div id="pestanas">
         <ul id=lista>
             <li id="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'>Velocidad</a></li>
-            <li id="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);'>Almacenadas</a></li>
-            <li id="pestana3"><a href='javascript:cambiarPestanna(pestanas,pestana3);'>Errores</a></li>
+            <li id="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);' onclick="mostrarGraficas()">Almacenadas</a></li>
+            <li id="pestana3"><a href='javascript:cambiarPestanna(pestanas,pestana3);' onclick="mostrarGraficas()">Errores</a></li>
         </ul>
     </div>
     <div id="contenidopestanas">
         <div id="cpestana1">
-            <canvas id="miGrafica" width="400" height="300" id="miGrafica"></canvas>
+            <canvas id="miGrafica" width="100%" id="miGrafica"></canvas>
         </div>
         <div id="cpestana2">
             <canvas id="miGrafica2" width="400" height="300" id="miGrafica2"></canvas>

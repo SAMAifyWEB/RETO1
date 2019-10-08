@@ -1,3 +1,6 @@
+/**
+ * Funcion para que se despliegue y se oculte el menu en las media queries.
+ */
 $(document).ready(function() {
 var contador = 1;
     $('#imgMenu').on("click", function(){
