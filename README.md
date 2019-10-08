@@ -31,6 +31,11 @@
 * Desarrolladores
   - Conoce a los desarrolladores de SAMAify
 
+  ## Descarga y Utilización
+  Puedes descargar la aplicación desde GitHub o clonarla a través de <a href="https://git-scm.com/downloads">GIT</a>.
+```bash
+# Clona el repositorio
+$ git clone https://github.com/SAMAifyWEB/RETO1.git
+```
+Para utilizar la aplicación es necesario instalar los paquetes Tia Portal y PLC Sim del software <a href="https://support.industry.siemens.com/cs/document/109752566/simatic-step-7-and-wincc-v15-trial-download-?dti=0&lc=en-WW">Simatic Step 7</a> de Siemens.
 
-# RETO 1
-# Version 1.0 1/10/2019 
