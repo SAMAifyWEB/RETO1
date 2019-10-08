@@ -5,8 +5,11 @@
 <h4 align="center">
   <span>Aplicación del tranvía de Vitoria-Gasteiz</span>
 </h4>
-<img src="https://img.shields.io/badge/License-CC-green">
 
+<p align="center">
+  <img src="https://img.shields.io/badge/License-CC-green">
+  <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+</p>
 
 
 # RETO 1
