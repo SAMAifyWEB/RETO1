@@ -1,3 +1,6 @@
+/**
+ * Funcion que se realiza al cargar la pagina
+ */
 window.onload = function() {
     let title = $("#title");
     let loaderContainer = $("#loader-container");
@@ -226,6 +229,10 @@ window.onload = function() {
         setTimeout(() => textContainerParent.css("position" , "absolute"), 400);
     }
 
+    /**
+     * Funcion para asignar las URL
+     * @param currentElement
+     */
     function asingarUrl(currentElement){
         switch (currentElement) {
             case "features-first": url = 'enDirecto.html';
