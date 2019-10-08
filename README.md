@@ -17,6 +17,14 @@
     <img src="https://img.shields.io/badge/$-donate-62c2d2.svg?maxAge=2592000&amp;style=flat">
   </a>
 </p>
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#download">Download</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#related">Related</a> •
+  <a href="#license">License</a>
+</p>
 <p align="center">FOOOOOOOTOOOOOOOOOOO</p>
   
 ## La aplicación
@@ -37,5 +45,8 @@ Puedes descargar la aplicación desde GitHub o clonarla a través de <a href="ht
 # Clona el repositorio
 $ git clone https://github.com/SAMAifyWEB/RETO1.git
 ```
-Para utilizar la aplicación es necesario instalar los paquetes Tia Portal y PLC Sim del software <a href="https://support.industry.siemens.com/cs/document/109752566/simatic-step-7-and-wincc-v15-trial-download-?dti=0&lc=en-WW">Simatic Step 7</a> de Siemens.
+Para utilizar la aplicación es necesario instalar los paquetes Tia Portal y PLC Sim del software <a href="https://support.industry.siemens.com/cs/document/109752566/simatic-step-7-and-wincc-v15-trial-download-?dti=0&lc=en-WW">Simatic Step 7</a> de Siemens. 
+Ejecuta el proyecto a través del Tia Portal.
 
+## Documentación
+## Key Features
