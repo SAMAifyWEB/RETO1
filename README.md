@@ -5,6 +5,7 @@
 <h4 align="center">
   <span>Aplicación del tranvía de Vitoria-Gasteiz</span>
 </h4>
+<img src="https://img.shields.io/badge/License-CC-green">
 
 
 
