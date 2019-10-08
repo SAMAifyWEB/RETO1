@@ -2,6 +2,13 @@
 <!-- AWP_In_Variable Name='"mis_datos".aceleracion' -->
 <!-- AWP_In_Variable Name='"mis_datos".posicionActual' -->
 <!-- AWP_In_Variable Name='"mis_datos".iniciado' -->
+<!--
+Variables del automata
+-->
+<!-- AWP_In_Variable Name='"mis_datos".Target position' -->
+<!-- AWP_In_Variable Name='"mis_datos".Acceleration' -->
+<!-- AWP_In_Variable Name='"mis_datos".Current speed' -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +19,17 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="../js/Navegador.js"></script>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <script type="text/javascript" src="../js/NavegadorTransicion.js"></script>
+   <!-- <script type="text/javascript" src="../js/NavegadorTransicion.js"></script>-->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery.subwayMap-0.5.2.js"></script>
+    <script type="text/javascript" src="../js/tiempoReal.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/styles.css">
+
+
+
+
 </head>
 <body>
 <header>
@@ -50,15 +67,29 @@
     <h2>Datos</h2>
 
     <form method="post" >
-        <div id="datos">
+        <div id="formularioSandbox">
 
-            <p>:="mis_datos".posicion:</p>
+         <!--   <p>:="mis_datos".posicion:</p>
             <p>:="mis_datos".proximaParada:</p>
             <p>:="mis_datos".velocidad:</p>
             <p>:="mis_datos".aceleracion:</p>
 
-            <p id="bool">:="mis_datos".iniciado:</p>
+            <p id="bool">:="mis_datos".iniciado:</p>-->
 
+            <div>
+                <p>Próxima parada</p>
+                <input type="number" class="mediano" name='"mis_datos".Target position'max="50" min="0"/>
+            </div>
+            <div>
+                <p>Velocidad</p>
+                <input type="number" class="mediano" name='"mis_datos".Acceleration' max="4" min="1"/>
+            </div>
+            <div>
+                <p>Aceleración</p>
+                <input type="number" class="mediano" name='"mis_datos".Current speed' max="5" min="1"/>
+            </div>
+
+<!--
             <label class="espacio">posicion: </label>
             <input type="number" pattern="[0-50]"  class="mediano" name='"mis_datos".posicion'max="50" min="0"/>
 
@@ -69,7 +100,7 @@
             <input type="number" class="mediano" name='"mis_datos".aceleracion' max="4" min="1"/>
 
             <label class="espacio">velocidad: </label>
-            <input type="number" class="mediano" name='"mis_datos".velocidad' max="5" min="1"/>
+            <input type="number" class="mediano" name='"mis_datos".velocidad' max="5" min="1"/>-->
 
            <!-- <label class="espacio">Aceleración: </label>
             <input type="number" class="mediano" name='"mis_datos".iniciado'/>
@@ -84,7 +115,7 @@
             <input type="text" class="mediano" name="numparadas"/>-->
 
         </div>
-        <div >
+        <div class="botonesSandbox">
             <p>
                 <button type="submit">
                     Iniciar
@@ -98,18 +129,62 @@
             </p>
         </div>
     </form>
-    <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
-    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-    <h3>Resize the browser window to see the effect.</h3>
-    <div id="linea">
 
+    <div id="linea">
     </div>
 
     <h2>Animacion</h2>
+    <div id="data">
+        <div>
+            <p>Posición</p>
+            <span id="current-position"></span>
+        </div>
+        <div>
+            <p>Próxima parada</p>
+            <span id="target-position"></span>
+        </div>
+        <div>
+            <p>Velocidad</p>
+            <span id="speed"></span>
+        </div>
+        <div>
+            <p>Aceleración</p>
+            <span id="acceleration"></span>
+        </div>
+    </div>
+    <div id="subway-container">
+        <div id="train"></div>
+        <div class="subway-map" data-columns="12" data-rows="10" data-cellSize="40" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="false" data-lineWidth="8">
+            <ul data-color="#CEFAC0" data-label="Vitoria-Gasteiz">
+                <li data-coords="0.5,5" data-marker="interchange">Angulema</li>
+                <li data-coords="4,5">Parlamento</li>
+                <li data-coords="8,5">Lovaina</li>
+                <li data-coords="11.5,5" data-marker="interchange">Sancho el Sabio</li>
 
+                <!--RECORRIDO CON CURVAS-->
+
+                <!--<li data-coords="1,2" data-marker="interchange">Angulema</li>
+                <li data-coords="4,2"></li>
+                <li data-coords="5,3" data-dir="E"></li>
+                <li data-coords="5,7" data-marker="@station" data-labelPos="W"></li> &lt;!&ndash; marker-only node &ndash;&gt;
+                <li data-coords="6,4" data-dir="S" data-markerInfo="h5">Parlamento</li>
+                <li data-coords="7,4"></li>
+                <li data-coords="7.15,8" data-marker="@station" data-labelPos="E"></li>  &lt;!&ndash; marker-only node, moved to the right by 0.15 &ndash;&gt;
+                <li data-coords="8,3" data-dir="E"></li>
+                <li data-coords="8,2"></li>
+                <li data-coords="9,1" data-dir="N">Lovaina</li>
+                <li data-coords="10,2" data-dir="E" data-labelPos="E"></li>
+                <li data-coords="10,5"></li>
+                <li data-coords="9,6" data-dir="S" data-marker="interchange">Sancho el Sabio</li>-->
+            </ul>
+        </div>
+        <div id="legend"></div>
+    </div>
 
 
 </div>
-
+<script type="text/javascript">
+    $(".subway-map").subwayMap({ debug: true });
+</script>
 </body>
 </html>
