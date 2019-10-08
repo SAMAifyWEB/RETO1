@@ -19,20 +19,20 @@
 </p>
 <p align="center">FOOOOOOOTOOOOOOOOOOO</p>
   
-  ## La aplicación
+## La aplicación
 
 * Vista a tiempo real
-  - Visualiza en directo la posición actual del tranvía en el mapa.
-  - Acceso a datos en tiempo real (Próxima parada, velocidad, aceleración...)
+- Visualiza en directo la posición actual del tranvía en el mapa.
+- Acceso a datos en tiempo real (Próxima parada, velocidad, aceleración...)
 * Estadísticas
-  - Visualización gráfica de estadísticas a tiempo real y almacenadas. (Velocidad, aceleración, distancia, errores...)
+- Visualización gráfica de estadísticas a tiempo real y almacenadas. (Velocidad, aceleración, distancia, errores...)
 * Sandbox
-  - Interfaz para testear y modificar algunos de los parámetros del tranvía. (Próxima parada, velocidad, aceleración...)
+- Interfaz para testear y modificar algunos de los parámetros del tranvía. (Próxima parada, velocidad, aceleración...)
 * Desarrolladores
-  - Conoce a los desarrolladores de SAMAify
+- Conoce a los desarrolladores de SAMAify
 
-  ## Descarga y Utilización
-  Puedes descargar la aplicación desde GitHub o clonarla a través de <a href="https://git-scm.com/downloads">GIT</a>.
+## Descarga y Utilización
+Puedes descargar la aplicación desde GitHub o clonarla a través de <a href="https://git-scm.com/downloads">GIT</a>.
 ```bash
 # Clona el repositorio
 $ git clone https://github.com/SAMAifyWEB/RETO1.git
