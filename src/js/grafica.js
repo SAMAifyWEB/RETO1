@@ -44,17 +44,18 @@ function cambiarPestanna(pestannas,pestanna) {
 }
 
 
-
+/**
+ * Funcion para seleccionar por defecto la pestaña velocidad
+ */
 function ocultarGraficas () {
     document.getElementById("pestana1").style.background = ' #000000';
     document.getElementById("miGrafica2").style.display = 'none';
     document.getElementById("miGrafica3").style.display = 'none';
 }
 
-function mostrarGrafica1() {
-    document.getElementById("miGrafica").style.display = 'block';
-}
-
+/**
+ * Funcion para las pestañas de almacenadas y errores
+ */
 function mostrarGraficas () {
     document.getElementById("miGrafica2").style.display = 'block';
     document.getElementById("miGrafica3").style.display = 'block';
@@ -133,6 +134,9 @@ let chart = new Chart(miCanvas, {
 
 //GRAFICA ALMACENADA
 
+/**
+ * Funcion para que coja los datos cada 6 segundos y saque las medias cada 8 segundos
+ */
 $(document).ready(function () {
     setInterval(actualizar2, 6000);
     setInterval(sacarMedias, 18000);
@@ -156,6 +160,9 @@ function actualizar2() {
 
 }
 
+/**
+ * Funcion con la que sacamos las medias de los datos recogidos
+ */
 function sacarMedias() {
     let media;
     media = mediaContador / contadorActualizaciones;
@@ -197,6 +204,9 @@ let chart2 = new Chart(miCanvas2, {
 //GRAFICA ERRORES
 let error
 
+/**
+ * Funcion para comprobar si hay algun error
+ */
 $(document).ready(function () {
     setInterval(actualizarError, 2000);
 })
