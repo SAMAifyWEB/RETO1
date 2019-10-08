@@ -1,5 +1,5 @@
 <p align="center">
-  ![alt text](https://raw.githubusercontent.com/SAMAifyWEB/RETO1/master/src/img/logo.png)
+  <img src="https://raw.githubusercontent.com/SAMAifyWEB/RETO1/master/src/img/logo.png">
 </p>
 # RETO 1
 # Version 1.0 1/10/2019 
