@@ -51,7 +51,9 @@ window.onload = function() {
     });
 
 
-    //EVENTOS CLICK EN FEATURES
+    /**
+     * EVENTOS CLICK EN FEATURES
+     */
     let hiddenFeatures = false;
     features.off('click').on('click', function() {
         let currentElementId = $(this).prop("id");
@@ -84,13 +86,18 @@ window.onload = function() {
         }
     });
 
-    //EVENTOS DOBLE CLICK EN FEATURES
+    /**
+     * EVENTOS DOBLE CLICK EN FEATURES
+     */
     features.off('dblclick').on('dblclick', function() {
         asingarUrl($(this).prop("id"));
         window.open(url, '_self');
     });
 
-    //EVENTOS CLICK EN LINK A PAGINAS PROYECTO
+    /**
+     * EVENTOS CLICK EN LINK A PAGINAS PROYECTO
+     */
+
     linkContainerParent.off('click').on('click', function() {
         transitionInfoContent(linkContainerParent, textContainerParent);
         let currentElementId = $(this).parent().siblings(".features").prop("id");
@@ -101,13 +108,21 @@ window.onload = function() {
     })
 
 
-
+    /**
+     * Ocultar los cuadros de caracteristicas
+     * @param currentElement
+     */
     function hideFeatureBoxes(currentElement){
         setTimeout(() => {
             currentElement.parent().css({"left":"0"});
             features.not(currentElement).parent().css("display", "none")
         }, 300); //.3s is the transition time of features. So when the feature trhansition ends we display them to none.
     }
+
+    /**
+     * Mostrar el cuadro de caracteristicas
+     * @param currentElement
+     */
     function showFeatureBoxes(currentElement){
         setTimeout(function(){
             switch (currentElement.prop("id")) {
@@ -128,17 +143,33 @@ window.onload = function() {
             features.css("opacity", "0.7"); //NOT WORKING BUGGED
         }, 1000); //.8s is the transition time of the info dropdown
     }
+
+    /**
+     * Crear el desplegable de informacion
+     * @param currentElement
+     * @param delay
+     */
     function createDesplegableInfo(currentElement, delay){
         setTimeout(function(){
             currentElement.siblings().css("width", "60vw");
         }, delay);
     }
+
+    /**
+     * Borrar las funciones al hacer hover
+     * @param currentElement
+     * @param delay
+     */
     function removeFeaturesHoverClass(currentElement, delay){
         setTimeout(function(){
             currentElement.removeClass("features-click-class");
             hiddenFeatures = false;
         }, delay); //.8s is the transition time of the info dropdown
     }
+
+    /**
+     * Cargar la pagina principal
+     */
     function load() {
         innerLoader.width("100%");
         let width = 0;
@@ -152,10 +183,21 @@ window.onload = function() {
             }
         }
     }
+
+    /**
+     * Reproducir el video
+     * @param videoIndex
+     */
     function playVideo(videoIndex) {
         video[videoIndex].play();
         video[videoIndex].style.opacity = "1";
     }
+
+    /**
+     * Parar el video
+     * @param videoIndex
+     * @param delay
+     */
     function stopVideo(videoIndex, delay) {
         setTimeout(function(){
             video[videoIndex].style.height = "30vh";
@@ -163,18 +205,27 @@ window.onload = function() {
             video[videoIndex].style.opacity = "0";
         }, delay);
     }
+
+    /**
+     * Mostar el texto
+     */
     function showText(){
         setTimeout(function(){
             textContainerParent.css({"position" : "static", "opacity" : "1"});
             linkContainerParent.css("opacity" , "1");
         }, 1000)
     }
+
+    /**
+     * Ocultar el texto
+     */
     function hideText(){
         textContainerParent.css("width", textContainerParent.width(), "important");
         textContainerParent.css("opacity", "0");
         linkContainerParent.css("opacity" , "0");
         setTimeout(() => textContainerParent.css("position" , "absolute"), 400);
     }
+
     function asingarUrl(currentElement){
         switch (currentElement) {
             case "features-first": url = 'enDirecto.html';
@@ -187,6 +238,12 @@ window.onload = function() {
                 break;
         }
     }
+
+    /**
+     * Transicion para el contenido de informacion
+     * @param currentElementLink
+     * @param currentElementText
+     */
     function transitionInfoContent(currentElementLink, currentElementText){
         currentElementLink.css({"transform" : "translateX(400%)", "opacity" : "0"});
         currentElementText.css({"transform" : "translateX(100%)", "opacity" : "0"});
