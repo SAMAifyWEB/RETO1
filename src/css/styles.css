@@ -735,6 +735,12 @@ footer img {
     background-color: #f96332;
     border-radius: 10px;
 }
+.botonesSandbox{
+
+
+}
+
+
 /*TRAIN LINE*/
 /* The main DIV for the map */
 .subway-map
@@ -809,6 +815,11 @@ li {
     width: 100%;
     justify-content: space-around;
     margin-bottom: -100px;
+}
+#formularioSandbox{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 
