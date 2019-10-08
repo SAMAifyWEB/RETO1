@@ -5,10 +5,11 @@
 <!--
 Variables del automata
 -->
-<!-- AWP_In_Variable Name='"mis_datos".Target position' -->
-<!-- AWP_In_Variable Name='"mis_datos".Acceleration' -->
-<!-- AWP_In_Variable Name='"mis_datos".Current speed' -->
 
+<!-- AWP_In_Variable Name='"mis_datos".Current speed' -->
+<!-- AWP_In_Variable Name='"mis_datos".Current position' -->
+<!-- AWP_In_Variable Name='"mis_datos".Acceleration' -->
+<!-- AWP_In_Variable Name='"mis_datos".Target position' -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +70,8 @@ Variables del automata
 <div class="content">
     <h2>Datos</h2>
 
-    <form method="post" >
+
+    <form method="post" target="foo">
         <div id="formularioSandbox">
 
          <!--   <p>:="mis_datos".posicion:</p>
@@ -81,42 +83,16 @@ Variables del automata
 
             <div>
                 <p>Próxima parada</p>
-                <input type="number" class="mediano" name='"mis_datos".Target position'max="50" min="0"/>
+                <input type="number" class="mediano" name='"mis_datos".Target position'max="4" min="1"/>
             </div>
             <div>
                 <p>Velocidad</p>
-                <input type="number" class="mediano" name='"mis_datos".Acceleration' max="4" min="1"/>
+                <input type="number" class="mediano" name='"mis_datos".Acceleration' max="100" min="1"/>
             </div>
             <div>
                 <p>Aceleración</p>
-                <input type="number" class="mediano" name='"mis_datos".Current speed' max="5" min="1"/>
+                <input type="number" class="mediano" name='"mis_datos".Current speed' max="100" min="1"/>
             </div>
-
-<!--
-            <label class="espacio">posicion: </label>
-            <input type="number" pattern="[0-50]"  class="mediano" name='"mis_datos".posicion'max="50" min="0"/>
-
-            <label class="espacio">proximaParada: </label>
-            <input type="number" pattern="[0-50]"  class="mediano" name='"mis_datos".posicion' step="10" max="50" min="10"/>
-
-            <label class="espacio">aceleración: </label>
-            <input type="number" class="mediano" name='"mis_datos".aceleracion' max="4" min="1"/>
-
-            <label class="espacio">velocidad: </label>
-            <input type="number" class="mediano" name='"mis_datos".velocidad' max="5" min="1"/>-->
-
-           <!-- <label class="espacio">Aceleración: </label>
-            <input type="number" class="mediano" name='"mis_datos".iniciado'/>
-
-            <label class="espacio">Número de paradas:</label>
-            <input type="text" class="mediano" name="numparadas"/><br>
-
-            <label class="espacio">Tiempo entre paradas: </label>
-            <input type="text" class="mediano" name="numparadas"/>
-
-            <label class="espacio">Tiempo del recorrido: </label>
-            <input type="text" class="mediano" name="numparadas"/>-->
-
         </div>
         <div class="botonesSandbox">
             <p>
@@ -132,7 +108,7 @@ Variables del automata
             </p>
         </div>
     </form>
-
+    <iframe name="foo" style="display:none;"></iframe>
     <div id="linea">
     </div>
 
