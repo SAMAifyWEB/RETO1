@@ -49,4 +49,6 @@ Para utilizar la aplicación es necesario instalar los paquetes Tia Portal y PLC
 Ejecuta el proyecto a través del Tia Portal.
 
 ## Documentación
-## Key Features
+## Desarrolladores y Soporte
+chartjs, subway map + samaify + ari
+
