@@ -20,7 +20,8 @@
   <a href="#la-aplicación">La aplicación</a> •
   <a href="#descarga">Descarga y Utilización</a> •
   <a href="#documentación">Documentación</a> •
-  <a href="#desarrolladores-y-soporte">Desarrolladores y Soporte</a> 
+  <a href="#desarrolladores-y-rss">Desarrolladores y RSS</a> •
+  <a href="#soporte">Soporte</a>
 </p>
 <p align="center"><img src="https://raw.githubusercontent.com/SAMAifyWEB/RETO1/master/src/img/landing.jpg"></p>
   
@@ -43,11 +44,16 @@ Puedes descargar la aplicación desde este repositorio de GitHub o clonarla a tr
 $ git clone https://github.com/SAMAifyWEB/RETO1.git
 ```
 ## Documentación
+Librerías utilizadas:
+ - <a href="https://www.chartjs.org/">Chart.js</a>
+ - <a href="https://kalyani.com/blog/2010/10/08/subway-map-visualization-jquery-plugin/">Subway Map Visualization </a>
+ - <a href="https://jquery.com/">jQuery</a>
+ 
 Para utilizar la aplicación es necesario instalar los paquetes Tia Portal y PLC Sim del software <a href="https://support.industry.siemens.com/cs/document/109752566/simatic-step-7-and-wincc-v15-trial-download-?dti=0&lc=en-WW">Simatic Step 7</a> de Siemens.
 
 Para la integración y ejecución del proyecto se recomienda leer el <a href="https://github.com/SAMAifyWEB/RETO1/blob/master/documentaci%C3%B3n/Manual%20del%20administrador.docx">manual de administrador</a>
 
-## Desarrolladores y Soporte
+## Desarrolladores y RRS
 Este proyecto ha sido creado por los desarrolladores de SAMAify 
  - <a href="https://github.com/AdrianDanlos">Adrián Danlos</a>
  - <a href="https://github.com/SergioZulueta">Sergio Zulueta</a>
@@ -60,8 +66,9 @@ Con la colaboración de los estudiantes de ARI:
 - Iñigo
 - Julen
 
-Librerías utilizadas:
- - <a href="https://www.chartjs.org/">Chart.js</a>
- - <a href="https://kalyani.com/blog/2010/10/08/subway-map-visualization-jquery-plugin/">Subway Map Visualization </a>
- - <a href="https://jquery.com/">jQuery</a>
+Redes sociales:
+ - <a href="https://twitter.com/AifySam">Twitter</a>
+ - <a href="https://www.instagram.com/samaify/?hl=es">Instagram</a>
 
+## Soporte
+Para cualquier incidencia relacionada con la aplicación no dudes en contactar con el equipo de SAMAify a través del correo SAMAify.web@gmail.com.
