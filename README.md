@@ -21,9 +21,9 @@
   <a href="#la-aplicación">La aplicación</a> •
   <a href="#descarga-y-utilización">Descarga y Utilización</a> •
   <a href="#documentación">Documentación</a> •
-  <a href="#desarrolladores-y-soporte">Desarrolladores y Soporte</a> •
+  <a href="#desarrolladores-y-soporte">Desarrolladores y Soporte</a> 
 </p>
-<p align="center">FOOOOOOOTOOOOOOOOOOO</p>
+<p align="center"><img src="https://imgur.com/a/1b2q8yJ"></p>
   
 ## La aplicación
 
