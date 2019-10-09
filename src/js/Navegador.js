@@ -1,15 +1,15 @@
 /**
- * Funcion para que se despliegue y se oculte el menu en las media queries.
+ * Funcion para que se despliegue y se oculte el menu.
  */
 $(document).ready(function() {
-var contador = 1;
+let contador = 1;
     $('#imgMenu').on("click", function(){
         if (contador == 1) {
             console.log("entro")
-            $('nav').css("left", "0");
+            $('nav').addClass("menuToggle");
             contador = 0;
-        } else {
-            $('nav').css("left", "-100%");
+        } else if (contador != 1){
+            $('nav').removeClass("menuToggle");
             console.log("entro al else")
             contador = 1;
         }

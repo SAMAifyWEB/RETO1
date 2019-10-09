@@ -43,18 +43,18 @@ function cambiarPestanna(pestannas,pestanna) {
 
 }
 
-
-
+/**
+ * Funcion para seleccionar por defecto la pestaña velocidad
+ */
 function ocultarGraficas () {
     document.getElementById("pestana1").style.background = ' #000000';
     document.getElementById("miGrafica2").style.display = 'none';
     document.getElementById("miGrafica3").style.display = 'none';
 }
 
-function mostrarGrafica1() {
-    document.getElementById("miGrafica").style.display = 'block';
-}
-
+/**
+ * Funcion para las pestañas de almacenadas y errores
+ */
 function mostrarGraficas () {
     document.getElementById("miGrafica2").style.display = 'block';
     document.getElementById("miGrafica3").style.display = 'block';
@@ -64,11 +64,11 @@ function mostrarGraficas () {
 //GRAFICA VELOCIDAD
 let contador
 let velocidad
-let aceleracion
 let contador2
 let mediaContador = 0;
 let contadorActualizaciones = 0;
 let hoy = new Date();
+let error
 
 let hoyString = hoy.toISOString().substr(11,8);
 
@@ -86,8 +86,8 @@ $(document).ready(function () {
  * Actualiza cada cierto tiempo los datos que coge del automata
  */
 function actualizar() {
-    $("#contador").load("leer_variable.html #contador1");
-    $("#velocidad").load("leer_variable.html #velocidad2");
+    $("#contador").load("../html/leer_variable.html #contador1");
+    $("#velocidad").load("../html/leer_variable.html #velocidad2");
 
     contador = parseInt(document.getElementById("contador1").innerHTML)
     velocidad = parseInt(document.getElementById("velocidad2").innerHTML)
@@ -133,6 +133,9 @@ let chart = new Chart(miCanvas, {
 
 //GRAFICA ALMACENADA
 
+/**
+ * Funcion para que coja los datos cada 6 segundos y saque las medias cada 8 segundos
+ */
 $(document).ready(function () {
     setInterval(actualizar2, 6000);
     setInterval(sacarMedias, 18000);
@@ -142,7 +145,7 @@ $(document).ready(function () {
  * Funcion para actualizar los datos del automata cada 18 segundos y sacar la media
  */
 function actualizar2() {
-    $("#contador").load("leer_variable.html #contador1");
+    $("#contador").load("../html/leer_variable.html #contador1");
 
     contador2 = parseInt(document.getElementById("contador1").innerHTML)
     console.log("contador: " + contador)
@@ -156,6 +159,9 @@ function actualizar2() {
 
 }
 
+/**
+ * Funcion con la que sacamos las medias de los datos recogidos
+ */
 function sacarMedias() {
     let media;
     media = mediaContador / contadorActualizaciones;
@@ -195,14 +201,16 @@ let chart2 = new Chart(miCanvas2, {
 
 
 //GRAFICA ERRORES
-let error
 
+/**
+ * Funcion para comprobar si hay algun error
+ */
 $(document).ready(function () {
     setInterval(actualizarError, 2000);
 })
 
 function actualizarError() {
-    $("#error").load("leer_variable.html #error3");
+    $("#error").load("../html/leer_variable.html #error3");
 
     error = parseInt(document.getElementById("error3").innerHTML)
     chartError.data.datasets[0].data.push(error)
