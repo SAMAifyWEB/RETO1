@@ -52,6 +52,12 @@ Este proyecto ha sido creado por los desarrolladores de SAMAify
  - <a href="https://github.com/AritzMartinez">Aritz Martinez</a>
  - <a href="https://github.com/miguelbarrosv">Miguel Barros</a>
 
+Con la colaboración de los estudiantes de ARI:
+- Unai
+- Omer
+- Iñigo
+- Julen
+
 Librerías utilizadas:
  - <a href="https://www.chartjs.org/">Chart.js</a>
  - <a href="https://kalyani.com/blog/2010/10/08/subway-map-visualization-jquery-plugin/">Subway Map Visualization </a>
