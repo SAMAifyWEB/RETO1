@@ -5,11 +5,11 @@
 <!--
 Variables del automata
 -->
-
 <!-- AWP_In_Variable Name='"mis_datos".Current speed' -->
 <!-- AWP_In_Variable Name='"mis_datos".Current position' -->
 <!-- AWP_In_Variable Name='"mis_datos".Acceleration' -->
 <!-- AWP_In_Variable Name='"mis_datos".Target position' -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,11 +70,15 @@ Variables del automata
 <div class="content">
     <h2>Datos</h2>
 
-
     <form method="post" target="foo">
         <div id="formularioSandbox">
 
-         <!--<p id="bool">:="mis_datos".iniciado:</p>-->
+         <!--   <p>:="mis_datos".posicion:</p>
+            <p>:="mis_datos".proximaParada:</p>
+            <p>:="mis_datos".velocidad:</p>
+            <p>:="mis_datos".aceleracion:</p>
+
+            <p id="bool">:="mis_datos".iniciado:</p>-->
 
             <div>
                 <p>Próxima parada</p>
@@ -82,11 +86,11 @@ Variables del automata
             </div>
             <div>
                 <p>Velocidad</p>
-                <input type="number" class="mediano" name='"mis_datos".Acceleration' max="100" min="1" value="1"/>
+                <input type="number" class="mediano" name='"mis_datos".Acceleration' max="9" min="1" value="0"/>
             </div>
             <div>
                 <p>Aceleración</p>
-                <input type="number" class="mediano" name='"mis_datos".Current speed' max="100" min="1" value="1"/>
+                <input type="number" class="mediano" name='"mis_datos".Current speed' max="9" min="1" value="0"/>
             </div>
         </div>
         <div class="botonesSandbox">
