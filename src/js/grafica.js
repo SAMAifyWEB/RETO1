@@ -52,6 +52,7 @@ function ocultarGraficas () {
     document.getElementById("miGrafica3").style.display = 'none';
 }
 
+
 /**
  * Funcion para las pestañas de almacenadas y errores
  */
