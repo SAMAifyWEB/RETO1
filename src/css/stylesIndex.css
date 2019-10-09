@@ -65,7 +65,7 @@ main {
     height: 20px;
     border-radius: inherit;
     background-color: var(--main-color-faded);
-    transition: width .1s;
+    transition: width 3.1s;
     transition-timing-function: cubic-bezier(0, .6, .9, 0.1);
     color: white;
 }
@@ -135,28 +135,28 @@ main {
     transition: opacity .8s ease-in;
 }
 #features-first {
-    background: url(../img/night.jpg) no-repeat center;
+    background: url(../img/endirecto1.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #features-second {
-    background: url(../img/stats.png) no-repeat center;
+    background: url(../img/grafica.PNG) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #features-third {
-    background: url(../img/metro.jpg) no-repeat center;
+    background: url(../img/sandbox.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #features-forth {
-    background: url(../img/developers.jpg) no-repeat center;
+    background: url(../img/aboutus.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
