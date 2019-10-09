@@ -79,6 +79,9 @@ console.log(hoyString)
 
 console.log(typeof hoyString)
 
+/**
+ * Cada X segundos nos metemos en la funcion actualizar
+ */
 $(document).ready(function () {
     setInterval(actualizar, 6000);
 })
@@ -86,7 +89,7 @@ $(document).ready(function () {
 
 
 /**
- * Actualiza cada cierto tiempo los datos que coge del automata
+ * Actualiza cada cierto tiempo los datos que coge del automata y los implementa en la grafica
  */
 function actualizar() {
     $("#contador").load("../html/leer_variable.html #contador1");
@@ -109,6 +112,11 @@ function actualizar() {
 
 let miCanvas = document.getElementById("miGrafica").getContext("2d")
 
+/**
+ * Esto es lo que usamos para plasmar una grafica en pantalla
+ *
+ * @type {string|string[]} en este caso es el formato de la grafica
+ */
 let chart = new Chart(miCanvas, {
     type: "line",
     data: {
@@ -137,7 +145,7 @@ let chart = new Chart(miCanvas, {
 //GRAFICA ALMACENADA
 
 /**
- * Funcion para que coja los datos cada 6 segundos y saque las medias cada 8 segundos
+ * Funcion para que coja los datos cada X segundos y saque las medias cada X segundos
  */
 $(document).ready(function () {
     setInterval(actualizar2, 6000);
@@ -145,7 +153,7 @@ $(document).ready(function () {
 })
 
 /**
- * Funcion para actualizar los datos del automata cada 18 segundos y sacar la media
+ * Funcion para actualizar los datos del automata cada X segundos y sacar la media
  */
 function actualizar2() {
     $("#contador").load("../html/leer_variable.html #contador1");
@@ -184,6 +192,11 @@ function sacarMedias() {
 
 let miCanvas2 = document.getElementById("miGrafica2").getContext("2d");
 
+/**
+ * Esto es lo que usamos para plasmar una grafica en pantalla
+ *
+ * @type {string|string[]} en este caso es el formato de la grafica
+ */
 let chart2 = new Chart(miCanvas2, {
     type: "line",
     data: {
@@ -206,12 +219,15 @@ let chart2 = new Chart(miCanvas2, {
 //GRAFICA ERRORES
 
 /**
- * Funcion para comprobar si hay algun error
+ * Funcion para comprobar si hay algun error y actualizar la grafica cada x segundos
  */
 $(document).ready(function () {
     setInterval(actualizarError, 2000);
 })
 
+/**
+ * Nos encargamos de de coger el booleano del automata, y plasmarlo en la grafica si nos salta algun error
+ */
 function actualizarError() {
     $("#error").load("../html/leer_variable.html #error3");
 
@@ -231,6 +247,11 @@ function actualizarError() {
 
 let miCanvasError = document.getElementById("miGrafica3").getContext("2d")
 
+/**
+ * Esto es lo que usamos para plasmar una grafica en pantalla
+ *
+ * @type {string|string[]} en este caso es el formato de la grafica
+ */
 let chartError = new Chart(miCanvasError, {
     type: "bar",
     data: {
