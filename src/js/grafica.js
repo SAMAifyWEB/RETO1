@@ -148,14 +148,13 @@ function actualizar2() {
     $("#contador").load("../html/leer_variable.html #contador1");
 
     contador2 = parseInt(document.getElementById("contador1").innerHTML)
-    console.log("contador: " + contador)
+    console.log("contador: " + contador2)
 
     mediaContador += contador2;
     console.log(mediaContador);
 
     contadorActualizaciones ++;
     console.log(contadorActualizaciones);
-
 
 }
 
@@ -167,9 +166,9 @@ function sacarMedias() {
     media = mediaContador / contadorActualizaciones;
     console.log(mediaContador);
 
-    localStorage.setItem("contador", media);
+    localStorage.setItem("media", media);
 
-    chart2.data.datasets[0].data.push(localStorage.getItem("contador"));
+    chart2.data.datasets[0].data.push(localStorage.getItem("media"));
 
     hoy = new Date();
 
