@@ -23,7 +23,7 @@
   <a href="#documentación">Documentación</a> •
   <a href="#desarrolladores-y-soporte">Desarrolladores y Soporte</a> 
 </p>
-<p align="center"><img src="https://imgur.com/a/1b2q8yJ"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SAMAifyWEB/RETO1/master/src/img/landing.jpg"></p>
   
 ## La aplicación
 
