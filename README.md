@@ -10,12 +10,9 @@
   <a href="https://opensource.org/licenses/Apache-2.0">
     <img src="https://img.shields.io/badge/License-Apache-green">
   </a>
-  <a href="https://opensource.org/licenses/Apache-2.0">
-    <img src="https://img.shields.io/badge/Version-2.0-yellowgreen">
-  </a>
-  <a href="https://opensource.org/licenses/Apache-2.0">
-    <img src="https://img.shields.io/badge/$-donate-62c2d2.svg?maxAge=2592000&amp;style=flat">
-  </a>
+  <img src="https://img.shields.io/badge/Version-2.0-yellowgreen">
+  <img src="https://img.shields.io/badge/$-donate-62c2d2.svg?maxAge=2592000&amp;style=flat">
+
 </p>
 <p align="center">
   <a href="#la-aplicación">La aplicación</a> •
