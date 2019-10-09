@@ -57,35 +57,42 @@ window.onload = function() {
     /**
      * EVENTOS CLICK EN FEATURES
      */
+
     let hiddenFeatures = false;
     features.off('click').on('click', function() {
-        let currentElementId = $(this).prop("id");
-        let videoIndex;
-        features.each(function(i){
-            if(currentElementId === $(this).prop("id")){
-                videoIndex = i;
-            }
-        });
-        if(hiddenFeatures){
-            $(this).siblings().css("width", "0");
-            showFeatureBoxes($(this));
-            removeFeaturesHoverClass($(this), 800);
-            stopVideo(videoIndex, 800);
-            hideText();
+        if($(this).prop("id") === "features-forth"){
+            asingarUrl($(this).prop("id"));
+            window.open(url, '_self');
         }
         else{
-            features.not($(this)).css("opacity", "0");
-            $(this).addClass("features-click-class");
-            hideFeatureBoxes($(this));
-            if($(this).prop("id")==='features-first'){
-                createDesplegableInfo($(this), 350);
+            let currentElementId = $(this).prop("id");
+            let videoIndex;
+            features.each(function(i){
+                if(currentElementId === $(this).prop("id")){
+                    videoIndex = i;
+                }
+            });
+            if(hiddenFeatures){
+                $(this).siblings().css("width", "0");
+                showFeatureBoxes($(this));
+                removeFeaturesHoverClass($(this), 800);
+                //stopVideo(videoIndex, 800);
+                hideText();
             }
             else{
-                createDesplegableInfo($(this), 900);
+                features.not($(this)).css("opacity", "0");
+                $(this).addClass("features-click-class");
+                hideFeatureBoxes($(this));
+                if($(this).prop("id")==='features-first'){
+                    createDesplegableInfo($(this), 350);
+                }
+                else{
+                    createDesplegableInfo($(this), 900);
+                }
+                //playVideo(videoIndex);
+                showText();
+                hiddenFeatures = true;
             }
-            playVideo(videoIndex);
-            showText();
-            hiddenFeatures = true;
         }
     });
 
@@ -117,8 +124,10 @@ window.onload = function() {
      */
     function hideFeatureBoxes(currentElement){
         setTimeout(() => {
-            currentElement.parent().css({"left":"0"});
-            features.not(currentElement).parent().css("display", "none")
+            if(currentElement.prop("id") !== "features-forth"){
+                currentElement.parent().css({"left":"0"});
+                features.not(currentElement).parent().css("display", "none")
+            }
         }, 300); //.3s is the transition time of features. So when the feature trhansition ends we display them to none.
     }
 
@@ -137,9 +146,6 @@ window.onload = function() {
                     break;
                 case 'features-third':
                     currentElement.parent().css({"left":"50%"});
-                    break;
-                case 'features-forth':
-                    currentElement.parent().css({"left":"75%"});
                     break;
             }
             features.not(currentElement).parent().css("display", "flex");
@@ -216,14 +222,14 @@ window.onload = function() {
         setTimeout(function(){
             textContainerParent.css({"position" : "static", "opacity" : "1"});
             linkContainerParent.css("opacity" , "1");
-        }, 1000)
+        }, 1500)
     }
 
     /**
      * Ocultar el texto
      */
     function hideText(){
-        textContainerParent.css("width", textContainerParent.width(), "important");
+        //textContainerParent.css("width", textContainerParent.width(), "important");
         textContainerParent.css("opacity", "0");
         linkContainerParent.css("opacity" , "0");
         setTimeout(() => textContainerParent.css("position" , "absolute"), 400);
@@ -235,11 +241,11 @@ window.onload = function() {
      */
     function asingarUrl(currentElement){
         switch (currentElement) {
-            case "features-first": url = 'enDirecto.html';
+            case "features-first": url = 'subwayMap.htm';
                 break;
             case "features-second": url = 'grafica.html';
                 break;
-            case "features-third": url = 'sandobox.html';
+            case "features-third": url = 'sandbox.html';
                 break;
             case "features-forth": url = 'aboutUs.html';
                 break;
