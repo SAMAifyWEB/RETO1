@@ -56,4 +56,5 @@ Este proyecto ha sido creado por los desarrolladores de SAMAify
 Librerías utilizadas:
  - <a href="https://www.chartjs.org/">Chart.js</a>
  - <a href="https://kalyani.com/blog/2010/10/08/subway-map-visualization-jquery-plugin/">Subway Map Visualization </a>
+ - <a href="https://jquery.com/">jQuery</a>
 
