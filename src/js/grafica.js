@@ -43,8 +43,6 @@ function cambiarPestanna(pestannas,pestanna) {
 
 }
 
-
-
 /**
  * Funcion para seleccionar por defecto la pestaña velocidad
  */
@@ -89,8 +87,8 @@ $(document).ready(function () {
  * Actualiza cada cierto tiempo los datos que coge del automata
  */
 function actualizar() {
-    $("#contador").load("leer_variable.html #contador1");
-    $("#velocidad").load("leer_variable.html #velocidad2");
+    $("#contador").load("../html/leer_variable.html #contador1");
+    $("#velocidad").load("../html/leer_variable.html #velocidad2");
 
     contador = parseInt(document.getElementById("contador1").innerHTML)
     velocidad = parseInt(document.getElementById("velocidad2").innerHTML)
@@ -148,7 +146,7 @@ $(document).ready(function () {
  * Funcion para actualizar los datos del automata cada 18 segundos y sacar la media
  */
 function actualizar2() {
-    $("#contador").load("leer_variable.html #contador1");
+    $("#contador").load("../html/leer_variable.html #contador1");
 
     contador2 = parseInt(document.getElementById("contador1").innerHTML)
     console.log("contador: " + contador)
@@ -213,7 +211,7 @@ $(document).ready(function () {
 })
 
 function actualizarError() {
-    $("#error").load("leer_variable.html #error3");
+    $("#error").load("../html/leer_variable.html #error3");
 
     error = parseInt(document.getElementById("error3").innerHTML)
     chartError.data.datasets[0].data.push(error)
