@@ -731,7 +731,7 @@ footer img {
 #linea{
     background-color: #f96332 ;
     height: 1px;
-    margin-right: 40px;
+    margin: 40px;
 }
 
 .boton{
@@ -741,9 +741,9 @@ footer img {
     background-color: #f96332;
     border-radius: 10px;
 }
-.botonesSandbox{
-
-
+#modificadores{
+    font-size: 14px;
+    font-weight: 300;
 }
 
 
