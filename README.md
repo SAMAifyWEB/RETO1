@@ -45,7 +45,7 @@ $ git clone https://github.com/SAMAifyWEB/RETO1.git
 ## Documentación
 Para utilizar la aplicación es necesario instalar los paquetes Tia Portal y PLC Sim del software <a href="https://support.industry.siemens.com/cs/document/109752566/simatic-step-7-and-wincc-v15-trial-download-?dti=0&lc=en-WW">Simatic Step 7</a> de Siemens.
 
-Para la integración y ejecución del proyecto se recomienda leer el <a href="https://github.com/SAMAifyWEB/RETO1/blob/master/documentaci%C3%B3n/Manual%20del%20administrador.docx">manual de administrador</a> adjunta.
+Para la integración y ejecución del proyecto se recomienda leer el <a href="https://github.com/SAMAifyWEB/RETO1/blob/master/documentaci%C3%B3n/Manual%20del%20administrador.docx">manual de administrador</a>
 
 ## Desarrolladores y Soporte
 Este proyecto ha sido creado por los desarrolladores de SAMAify 
