@@ -6,10 +6,11 @@
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/aboutUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/aboutUs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/grafica.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/grafica.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/menuReto1.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/html/sandbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/sandbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/subwayMap.htm" beforeDir="false" afterPath="$PROJECT_DIR$/html/subwayMap.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Navegador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Navegador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/funciones.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/funciones.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/grafica.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/grafica.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loader.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,8 +92,10 @@
       <workItem from="1570083641699" duration="3013000" />
       <workItem from="1570170065375" duration="5594000" />
       <workItem from="1570429024020" duration="9122000" />
-      <workItem from="1570515840760" duration="4603000" />
-      <workItem from="1570602152305" duration="2205000" />
+      <workItem from="1570446068072" duration="12000" />
+      <workItem from="1570515995097" duration="101000" />
+      <workItem from="1570516426225" duration="2869000" />
+      <workItem from="1570515840760" duration="4334000" />
     </task>
     <servers />
   </component>
