@@ -51,9 +51,9 @@ Ejecuta el proyecto a través del Tia Portal.
 ## Desarrolladores y Soporte
 Este proyecto ha sido creado por los desarrolladores de SAMAify 
  - <a href="https://github.com/AdrianDanlos">Adrián Danlos</a>
- - <a href="https://github.com/SergioZulueta">Miguel Barros</a>
- - <a href="https://github.com/AritzMartinez">Sergio Zulueta</a>
- - <a href="https://github.com/miguelbarrosv">Aritz Martínez</a>
+ - <a href="https://github.com/SergioZulueta">Sergio Zulueta</a>
+ - <a href="https://github.com/AritzMartinez">Aritz Martinez</a>
+ - <a href="https://github.com/miguelbarrosv">Miguel Barros</a>
 
 Librerías utilizadas:
  - <a href="https://www.chartjs.org/">Chart.js</a>
