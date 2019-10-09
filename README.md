@@ -18,12 +18,10 @@
   </a>
 </p>
 <p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#related">Related</a> •
-  <a href="#license">License</a>
+  <a href="#la-aplicación">La aplicación</a> •
+  <a href="#descarga-y-utilización">Descarga y Utilización</a> •
+  <a href="#documentación">Documentación</a> •
+  <a href="#desarrolladores-y-soporte">Desarrolladores y Soporte</a> •
 </p>
 <p align="center">FOOOOOOOTOOOOOOOOOOO</p>
   
