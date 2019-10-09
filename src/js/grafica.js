@@ -43,6 +43,8 @@ function cambiarPestanna(pestannas,pestanna) {
 
 }
 
+
+
 /**
  * Funcion para seleccionar por defecto la pestaña velocidad
  */
