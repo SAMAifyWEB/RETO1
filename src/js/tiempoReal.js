@@ -20,9 +20,17 @@ window.onload = function() {
     span.eq(2).css({"left" : "320", "top" : "200"})
     span.eq(3).css({"left" : "462", "top" : "158"})
 
-    setInterval(actualizar, 6500);
-    setInterval(animacion, 6500);
+    actualizar();
+    setInterval(actualizar, 1000);
 
+    function actualizar(){
+        $.get('../html/leer_variable.html', function (data) {
+            speed = data.substring(16,17);
+            acceleration = data.substring(39,40);
+            targetPosition = data.substring(62,63);
+            animacion();
+        });
+    }
 
     function animacion(){
         switch (parseInt(targetPosition)) {
@@ -53,14 +61,4 @@ window.onload = function() {
         speedTag.text(speed + " cm/s");
         accelerationTag.text(acceleration + " cm/s");
     };
-
-
-    function actualizar(){
-        $.get('../html/leer_variable.html', function (data) {
-            let fullDatos = data;
-            speed = fullDatos.substring(18,19);
-            acceleration = fullDatos.substring(42,43);
-            targetPosition = fullDatos.substring(66,67);
-        });
-    }
 };
