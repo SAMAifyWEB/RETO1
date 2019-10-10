@@ -49,7 +49,7 @@ function cambiarPestanna(pestannas,pestanna) {
  * Funcion para seleccionar por defecto la pestaña velocidad
  */
 function ocultarGraficas () {
-    document.getElementById("pestana1").style.background = ' #000000';
+    document.getElementById("pestana1").style.background = '#000000';
     document.getElementById("miGrafica2").style.display = 'none';
     document.getElementById("miGrafica3").style.display = 'none';
 }
