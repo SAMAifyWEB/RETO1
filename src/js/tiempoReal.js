@@ -25,9 +25,9 @@ window.onload = function() {
 
     function actualizar(){
         $.get('../html/leer_variable.html', function (data) {
-            speed = data.substring(16,17);
+            speed = data.substring(19,20);
             acceleration = data.substring(39,40);
-            targetPosition = data.substring(62,63);
+            targetPosition = data.substring(65,66);
             animacion();
         });
     }
