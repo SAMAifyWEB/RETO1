@@ -1,6 +1,6 @@
 html, body {
-    --main-color: rgba(34, 239, 196, 1);
-    --main-color-faded: rgba(34, 239, 196, 0.7);
+    --main-color: #F96332;
+    --main-color-faded: rgba(249, 99, 50, 0.7);
     margin: 0;
     padding: 0;
     color: var(--main-color);
